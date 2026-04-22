@@ -56,31 +56,31 @@
 	combos {
 		compatible = "zmk,combos";
 		// both right thumb keys
-		combo_accent {
-			timeout-ms = <200>;
-			key-positions = <32 33>;
-			bindings = <&mo ACCENT>;
-		};
-		// internal-left & external-right thumb keys
-		combo_sym2 {
-			timeout-ms = <200>;
-			key-positions = <31 33>;
-			bindings = <&mo SYM2>;
-		};
-		// both left thumb keys
-		combo_settings {
-			timeout-ms = <200>;
-			key-positions = <30 31>;
-			bindings = <&mo SETTINGS>;
-		};
-		// left index & middle fingers (home-row)
-		// hold control & space for Adobe workflow
-		combo_ctrl_space {
-			timeout-ms = <200>;
-			key-positions = <12 13>;
-			bindings = <&kp LC(SPACE)>;
-			layers = <BASE>;
-		};
+		 combo_settings {
+		 	timeout-ms = <200>;
+		 	key-positions = <32 33>;
+		 	bindings = <&mo SETTINGS>;
+		 };
+		// // internal-left & external-right thumb keys
+		// combo_sym2 {
+		// 	timeout-ms = <200>;
+		// 	key-positions = <31 33>;
+		// 	bindings = <&mo SYM2>;
+		// };
+		// // both left thumb keys
+		// combo_settings {
+		// 	timeout-ms = <200>;
+		// 	key-positions = <30 31>;
+		// 	bindings = <&mo SETTINGS>;
+		// };
+		// // left index & middle fingers (home-row)
+		// // hold control & space for Adobe workflow
+		// combo_ctrl_space {
+		// 	timeout-ms = <200>;
+		// 	key-positions = <12 13>;
+		// 	bindings = <&kp LC(SPACE)>;
+		// 	layers = <BASE>;
+		// };
 	};
 
 	keymap {
@@ -90,9 +90,9 @@
 			label = "Base";
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_OGRV
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
-							&mo EXT &qt LSHIFT SPACE           &kp SPACE &sl SYM
+			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp SEMICOLON
+			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
+							&qt SETTINGS SPACE &kp SPACE           &kp SPACE &kp SPACE
 			>;
 		};
 
