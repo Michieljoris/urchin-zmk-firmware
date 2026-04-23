@@ -1,0 +1,7 @@
+(cd /Users/michiel/opt/zmk
+ pwd
+ source .venv/bin/activate
+ cd app
+ west build -b nice_nano -d left --pristine -- -DSHIELD=urchin_left -DZMK_EXTRA_MODULES="/Users/michiel/src/urchin-zmk-firmware"
+ west build -b nice_nano -d right --pristine -- -DSHIELD=urchin_right -DZMK_EXTRA_MODULES="/Users/michiel/src/urchin-zmk-firmware"
+)
