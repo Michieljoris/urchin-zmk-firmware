@@ -1,9 +1,19 @@
-(cd $HOME/opt/zmk
- pwd
+COMMIT_COUNT=$(git rev-list --count HEAD)
+DIR=$(pwd)
+BUILD_DIR=$DIR/firmware/$COMMIT_COUNT
+BUILD_DIR_LATEST=$DIR/firmware/latest
+ZMK=$HOME/opt/zmk/
+mkdir -p $BUILD_DIR
+mkdir -p $BUILD_DIR_LATEST
+(cd $ZMK
  source .venv/bin/activate
  cd app
- west build -b nice_nano -d build/left --pristine=auto -- -DSHIELD=urchin_left -DZMK_EXTRA_MODULES="$HOME/src/urchin-zmk-firmware"
- west build -b nice_nano -d build/right --pristine=auto -- -DSHIELD=urchin_right -DZMK_EXTRA_MODULES="$HOME/src/urchin-zmk-firmware"
- cp  $HOME/zmk/app/build/left/zephyr/zmk.uf2 $HOME/src/urchin-zmk-firmware/left.uf2
- cp  $HOME/opt/zmk/app/build/right/zephyr/zmk.uf2 $HOME/src/urchin-zmk-firmware/right.uf2
+ west build -b nice_nano -d build/left --pristine=auto -- -DSHIELD=urchin_left -DZMK_EXTRA_MODULES=$DIR
+ west build -b nice_nano -d build/right --pristine=auto -- -DSHIELD=urchin_right -DZMK_EXTRA_MODULES=$DIR
+ cp  build/left/zephyr/zmk.uf2 $BUILD_DIR/left.uf2
+ cp  build/left/zephyr/zmk.uf2 $BUILD_DIR_LATEST/left.uf2
+ cp  build/right/zephyr/zmk.uf2 $BUILD_DIR/right.uf2
+ cp  build/right/zephyr/zmk.uf2 $BUILD_DIR_LATEST/right.uf2
 )
+
+echo "Copied left.uf2 and right.uf2 to $BUILD_DIR and $BUILD_DIR_LATEST"
