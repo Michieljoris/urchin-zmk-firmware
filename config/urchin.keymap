@@ -71,9 +71,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 //0
 ZMK_BASE_LAYER(Base,
-    &kp Q           &hml LGUI W   &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI Y   &kp P     ,
+    &kp Q           &hml LGUI W   &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI O   &kp P     ,
     &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
-    &kp Z           &kp X         &kp C        &lt AMOUSE V  &kp B   ,   &kp M     &kp N         &kp COMMA    &kp DOT       &kp SLASH      ,
+    &kp Z           &kp X         &kp C        &lt AMOUSE V  &kp B   ,   &kp N     &kp M         &kp COMMA    &kp DOT       &kp SLASH      ,
                         &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC
 )
 
