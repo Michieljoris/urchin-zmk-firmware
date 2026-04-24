@@ -3,5 +3,4 @@
 *.log
 tmp/
 
-*.uf2
 firmware/
