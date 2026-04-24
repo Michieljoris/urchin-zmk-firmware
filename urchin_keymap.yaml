@@ -446,7 +446,7 @@ combos:
   k: F10
   l: [Right]
 - p: [11, 12]
-  k: {t: ESC, h: LALT}
+  k: '&hmlla 1 ESC'
   l: [Base]
 - p: [12, 13]
   k: {t: TAB, h: Ctl+LALT}
@@ -455,7 +455,7 @@ combos:
   k: {t: RET, h: Ctl+LALT}
   l: [Base]
 - p: [17, 18]
-  k: {t: ESC, h: LALT}
+  k: '&hmlla 1 ESC'
   l: [Base]
 - p: [16, 17]
   k: F11
