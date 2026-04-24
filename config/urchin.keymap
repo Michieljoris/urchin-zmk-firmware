@@ -18,10 +18,14 @@
 
 // Layer definitions
 #define BASE 0
-#define ALT_RIGHT 1
-#define ALT_LEFT 2
-#define ALT_MOUSE 3
+#define ARIGHT 1
+#define ALEFT 2
+#define AMOUSE 3
 #define SETTINGS 4
+#define BASEL 5
+#define BASEM 6
+#define ALEFTL 7
+#define ALEFTM 8
 
 #define XXX &none
 #define ___ &trans
@@ -72,25 +76,25 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 //0
 ZMK_BASE_LAYER(Base,
-    &kp Q           &hml LGUI W &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI Y &kp P     ,
-    &hml LSHIFT A   &lt 1 S     &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt 2 L     &hmr RSHIFT SEMICOLON ,
-    &kp Z           &kp X       &kp C        &lt 3 V       &kp B   ,   &kp M     &kp N         &kp COMMA    &kp DOT     &kp SLASH      ,
+    &kp Q           &hml LGUI W   &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI Y   &kp P     ,
+    &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
+    &kp Z           &kp X         &kp C        &lt AMOUSE V  &kp B   ,   &kp M     &kp N         &kp COMMA    &kp DOT       &kp SLASH      ,
                                                   &kp SPC &kp SPC  ,   &kp SPC  &kp SPC
 )
 
 //1
 ZMK_BASE_LAYER(Right,
-    ___         ___      &kp C_BRI_DN  &kp C_BRI_UP  ___   ,   &kp GRAVE &kp MINUS  &kp EQUAL  &kp BSPC    &kp BACKSLASH    ,
+    ___         &kp LGUI &kp C_BRI_DN  &kp C_BRI_UP  ___   ,   &kp GRAVE &kp MINUS  &kp EQUAL  &kp BSPC    &kp BACKSLASH    ,
     &kp LSHIFT  XXX      &kp LALT      &kp LCTRL     ___   ,   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT   &kp SQT           ,
-    ___         ___      ___           &kp LGUI      ___   ,   ___       &kp LPAR   &kp LBKT   &kp RBKT    &kp RPAR   ,
+    ___         ___      ___           ___           ___   ,   ___       &kp LPAR   &kp LBKT   &kp RBKT    &kp RPAR   ,
                                          &kp BSPC &kp BSPC ,   &kp BSPC &kp BSPC
 )
 
 //2
 ZMK_BASE_LAYER(Left,
-   ___ ___ ___ ___ ___                            ,  ___   &kp C_VOL_UP &kp C_VOL_DN  ___      ___        ,
-   &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END ___ ,  ___   &kp LCTRL &kp LALT XXX &kp RSHIFT,
-   ___ ___ ___ ___ ___                            ,  ___   &kp LGUI     &kp C_MUTE    ___      &kp C_PP       ,
+   ___ ___ ___ ___ ___                            ,  ___   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP         ,
+   &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END ___ ,  ___   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT,
+   ___ ___ ___ ___ ___                            ,  ___   &kp C_MUTE    ___          ___       ___       ,
                                  &kp DEL &kp DEL ,   &kp DEL &kp DEL
 )
 
@@ -106,38 +110,38 @@ ZMK_BASE_LAYER(Mouse,
 ZMK_BASE_LAYER(Settings,
    &studio_unlock &out OUT_USB &out OUT_BLE XXX          &sys_reset   , &sys_reset    XXX           XXX           XXX           &studio_unlock ,
    &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 , &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 ,
-   &bt BT_CLR     XXX          XXX          XXX          &bootloader  , &bootloader   XXX           &to 6         &to 5            &to 0           ,
+   &bt BT_CLR     XXX          XXX          XXX          &bootloader  , &bootloader   XXX           &to BASEM      &to 5            &to 0           ,
                                                               XXX XXX,   XXX XXX
 )
 
 //5
 ZMK_BASE_LAYER(BaseLinux,
-    &kp Q           &hml LGUI W &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI Y &kp P     ,
-    &hml LSHIFT A   &lt 1 S     &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt 7 L     &hmr RSHIFT SEMICOLON ,
-    &kp Z           &kp X       &kp C        &lt 3 V       &kp B   ,   &kp M     &kp N         &kp COMMA  &kp DOT     &kp SLASH      ,
+    &kp Q           &hml LGUI W  &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI Y &kp P     ,
+    &hml LSHIFT A   &lt ARIGHT S &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFTL L     &hmr RSHIFT SEMICOLON ,
+    &kp Z           &kp X        &kp C        &lt AMOUSE V  &kp B   ,   &kp M     &kp N         &kp COMMA  &kp DOT     &kp SLASH      ,
                                                   &kp SPC &kp SPC  ,   &kp SPC  &kp SPC
 )
 
 //6
 ZMK_BASE_LAYER(BaseMac,
-    &kp Q           &hml LGUI W &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI Y &kp P     ,
-    &hml LSHIFT A   &lt 1 S     &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt 8 L     &hmr RSHIFT SEMICOLON ,
-    &kp Z           &kp X       &kp C        &lt 3 V       &kp B   ,   &kp M     &kp N         &kp COMMA  &kp DOT     &kp SLASH      ,
+    &kp Q           &hml LGUI W   &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI Y   &kp P     ,
+    &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFTM L  &hmr RSHIFT SEMICOLON ,
+    &kp Z           &kp X         &kp C        &lt 3 V       &kp B   ,   &kp M     &kp N         &kp COMMA  &kp DOT         &kp SLASH      ,
                                                   &kp SPC &kp SPC  ,   &kp SPC  &kp SPC
 )
 
 //7
 ZMK_BASE_LAYER(LeftLinux,
-    &kp LC(Q)   &kp LC(W)   &kp LC(E) &kp LC(R)  &kp LC(T)   ,  ___   ___       ___  ___      ___        ,
-    &kp LC(A)   &kp LC(S)   XXX       &kp LC(F)  &kp LC(G)   , ___   &kp LCTRL &kp LALT XXX &kp RSHIFT,
-    &kp LC(Z)   &kp LC(X)   &kp LC(C) &kp LC(V)  XXX         ,  ___   &kp LGUI  ___      ___   ___       ,
+    &kp LC(Q)   &kp LC(W)   &kp LC(E) &kp LC(R)  &kp LC(T)   ,  ___   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP         ,
+    &kp LC(A)   &kp LC(S)   XXX       &kp LC(F)  &kp LC(G)   ,  ___   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT,
+    &kp LC(Z)   &kp LC(X)   &kp LC(C) &kp LC(V)  XXX         ,  ___   &kp C_MUTE    ___          ___       ___       ,
                                              &kp DEL &kp DEL ,   &kp DEL &kp DEL
 )
 
 //8
 ZMK_BASE_LAYER(LeftMac,
-    &kp LG(Q)   &kp LG(W)   &kp LG(E) &kp LG(R)  &kp LG(T)   ,  ___   ___       ___  ___      ___        ,
-    &kp LG(A)   &kp LG(S)   XXX       &kp LG(F)  &kp LG(G)   , ___   &kp LCTRL &kp LALT XXX &kp RSHIFT,
-    &kp LG(Z)   &kp LG(X)   &kp LG(C) &kp LG(V)  XXX         ,  ___   &kp LGUI  ___      ___   ___       ,
+    &kp LG(Q)   &kp LG(W)   &kp LG(E) &kp LG(R)  &kp LG(T)   ,  ___   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP         ,
+    &kp LG(A)   &kp LG(S)   XXX       &kp LG(F)  &kp LG(G)   ,  ___   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT,
+    &kp LG(Z)   &kp LG(X)   &kp LG(C) &kp LG(V)  XXX         ,  ___   &kp C_MUTE    ___          ___       ___       ,
                                              &kp DEL &kp DEL ,   &kp DEL &kp DEL
 )
