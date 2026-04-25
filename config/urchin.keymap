@@ -99,66 +99,6 @@ ZMK_BASE_LAYER(Mouse,
 ZMK_BASE_LAYER(Settings,
    &studio_unlock &out OUT_USB &out OUT_BLE XXX          &sys_reset   , &sys_reset    XXX           XXX           XXX               &studio_unlock ,
    &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 , &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4      ,
-   &bt BT_CLR     &to BASEM    XXX          &to BASE     &bootloader  , &bootloader   XXX           &to BASEM     XXX               &to BASE       ,
+   &bt BT_CLR     &to BASE     &to BASEM     XXX        &bootloader  , &bootloader   XXX            &to BASE      &to BASEM      XXX ,
                                                               XXX XXX ,   XXX XXX
 )
-
-
-
-
-/* &sl { // sticky layer  */
-/* 	// don't release mods on other mods presses */
-/* 	ignore-modifiers; */
-/* }; */
-
-
-/* ZMK_BASE_LAYER(Base, */
-/*     &kp Q           &hml LGUI W   &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI O   &kp P     , */
-/*     &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON , */
-/*     &kp Z           &kp X         &kp C        &lt AMOUSE V  &kp B   ,   &kp N     &kp M         &kp COMMA    &kp DOT       &kp SLASH      , */
-/*                         &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC */
-/* ) */
-
-/* ZMK_BASE_LAYER(BaseL, */
-/*     &kp Q           &hml LGUI W  &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI O &kp P     , */
-/*     &hml LSHIFT A   &lt ARIGHT S &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFTL L     &hmr RSHIFT SEMICOLON , */
-/*     &kp Z           &kp X        &kp C        &lt AMOUSE V  &kp B   ,   &kp N     &kp M         &kp COMMA  &kp DOT     &kp SLASH      , */
-/*                         &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC */
-/* ) */
-
-/* ZMK_BASE_LAYER(BaseM, */
-/*     &kp Q           &hml LGUI W   &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI O   &kp P     , */
-/*     &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFTM L  &hmr RSHIFT SEMICOLON , */
-/*     &kp Z           &kp X         &kp C        &lt 3 V       &kp B   ,   &kp N     &kp M         &kp COMMA  &kp DOT         &kp SLASH      , */
-/*                         &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC */
-/* ) */
-
-
-
-
-
-/* ZMK_BASE_LAYER(Left, */
-/*    ___ ___ ___ ___ ___                            ,  ___   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP         , */
-/*    &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END ___ ,  ___   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT, */
-/*    ___ ___ ___ ___ ___                            ,  ___   &kp C_MUTE    ___          ___       ___       , */
-/*                                  &kp DEL &kp DEL ,   &kp DEL &kp DEL */
-/* ) */
-
-/* ZMK_BASE_LAYER(LeftL, */
-/*     &kp LC(Q)   &kp LC(W)   &kp LC(E) &kp LC(R)  &kp LC(T)   ,  ___   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP         , */
-/*     &kp LC(A)   &kp LC(S)   XXX       &kp LC(F)  &kp LC(G)   ,  ___   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT, */
-/*     &kp LC(Z)   &kp LC(X)   &kp LC(C) &kp LC(V)  XXX         ,  ___   &kp C_MUTE    ___          ___       ___       , */
-/*                                              &kp DEL &kp DEL ,   &kp DEL &kp DEL */
-/* ) */
-
-/* ZMK_BASE_LAYER(LeftM, */
-/*     &kp LG(Q)   &kp LG(W)   &kp LG(E) &kp LG(R)  &kp LG(T)   ,  ___   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP         , */
-/*     &kp LG(A)   &kp LG(S)   XXX       &kp LG(F)  &kp LG(G)   ,  ___   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT, */
-/*     &kp LG(Z)   &kp LG(X)   &kp LG(C) &kp LG(V)  XXX         ,  ___   &kp C_MUTE    ___          ___       ___       , */
-/*                                              &kp DEL &kp DEL ,   &kp DEL &kp DEL */
-/* ) */
-
-// Hack: Make HRM combos tap-only (cf, ZMK issue #544).
-/* #define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE)     \ */
-/*   MAKE_HRM(hm_combo_##NAME, &kp, TAP, SIDE THUMBS)                             \ */
-/*   ZMK_COMBO_6(NAME, &hm_combo_##NAME HOLD 0, POS, LAYERS, COMBO_MS, IDLE_MS) */
