@@ -39,9 +39,9 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
+#include "leader.dtsi"
 #include "combos.dtsi" // Must be sourced after HRM-combo hack.
 #include "mouse.dtsi"
-#include "leader.dtsi"
 
 #ifndef ZMK_BASE_LAYER
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)  \
