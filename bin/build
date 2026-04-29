@@ -1,7 +1,6 @@
 set -e
 
 COMMIT_COUNT=$(git rev-list --count HEAD)
-SHIELD="urchin_left nice_view_adapter nice_view"
 DIR=$(pwd)
 VIEW=/Users/michiel/opt/nice-view-gem
 VIEW=""
@@ -16,8 +15,8 @@ mkdir -p $BUILD_DIR_LATEST
 (cd $ZMK
  source .venv/bin/activate
  cd app
- west build -b nice_nano@2.0.0//zmk -d build/left --pristine=auto -- -DSHIELD=$SHIELD -DZMK_EXTRA_MODULES=$EXTRA_MODULES
- west build -b nice_nano@2.0.0//zmk  -d build/right --pristine=auto -- -DSHIELD=$SHIELD -DZMK_EXTRA_MODULES=$EXTRA_MODULES
+ west build -b nice_nano@2.0.0//zmk -d build/left --pristine=auto -- -DSHIELD="urchin_left nice_view_adapter nice_view" -DZMK_EXTRA_MODULES=$EXTRA_MODULES
+ west build -b nice_nano@2.0.0//zmk  -d build/right --pristine=auto -- -DSHIELD="urchin_right nice_view_adapter nice_view" -DZMK_EXTRA_MODULES=$EXTRA_MODULES
 
  cp  build/left/zephyr/zmk.uf2 $BUILD_DIR/left.uf2
  cp  build/left/zephyr/zmk.uf2 $BUILD_DIR_LATEST/left.uf2

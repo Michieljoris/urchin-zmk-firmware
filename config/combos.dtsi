@@ -61,9 +61,10 @@ MAKE_HRML(mora, &moa, &kp, KEYS_L THUMBS) // Left-hand HRMs.
 MAKE_HRML(morc, &moc, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 MAKE_HRML(mors, &mos, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
+#define ASF(NUMBER) &as F##NUMBER N##NUMBER     // AutoFn Macro
 
 // Numbers
-ZMK_COMBO(one,   &kp N1, LT4 LT3        , BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(one,   ASF(1), LT4 LT3        , BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(three, &kp N3,     LT3 LT2    , BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(five,  &kp N5,         LT2 LT1, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 

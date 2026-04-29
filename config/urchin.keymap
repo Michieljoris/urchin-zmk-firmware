@@ -41,6 +41,23 @@
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
+  
+  
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+
+/ {
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+};
+
 
 #include "leader.dtsi"
 #include "combos.dtsi" // Must be sourced after HRM-combo hack.
@@ -55,7 +72,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 // BASE
 ZMK_BASE_LAYER(NAME,
-      &kp Q           &kp W         &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &kp O  &kp P     ,
+      AS(Q)       &kp W         &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &kp O  &kp P     ,
       &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
       &kp Z           &lt AMOUSE X  &kp C        &hml LGUI  V  &kp B   ,   &kp N     &hml LGUI M         &kp COMMA    &kp DOT      &kp SLASH      ,
       &lt RLEFT SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &lt RRIGHT SPC
