@@ -11,12 +11,14 @@
 
 // Layer definitions
 #define BASE 0
-#define RRIGHT 1
-#define RLEFT 2
-#define ALEFT 3
-#define ARIGHT 4
-#define AMOUSE 5
-#define SETTINGS 6
+#define MODSL 1
+#define MODSR 2
+#define RRIGHT 3
+#define RLEFT 4
+#define ALEFT 5
+#define ARIGHT 6
+#define AMOUSE 7
+#define SETTINGS 8
 
 #define XXX &none
 #define ___ &trans
@@ -51,7 +53,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -72,10 +74,26 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 // BASE
 ZMK_BASE_LAYER(Base,
-      AS(Q)       &kp W         &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &kp O  &kp P     ,
-      &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
-      &kp Z           &lt AMOUSE X  &kp C        &hml LGUI  V  &kp B   ,   &kp N     &hml LGUI M         &kp COMMA    &kp DOT      &kp SLASH      ,
-      &lt RLEFT SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &lt RRIGHT SPC
+      AS(Q)       AS(W)         AS(E)  AS(R)  AS(T)   ,   AS(Y)     AS(U)  AS(I)       AS(O)    AS(P)     ,
+      AS(A)       AS(S)         AS(D)  AS(F)  AS(G)   ,   AS(H)     AS(J)  AS(K)        AS(L)   AS(SEMICOLON) ,
+      AS(Z)       AS(X)         AS(C)  AS(V)  AS(B)   ,   AS(N)     AS(M)  AS(COMMA)    AS(DOT) AS(SLASH)      ,
+                   &lt MODSL SPC   &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &lt MODSR SPC
+      )
+
+//MODSL
+ZMK_BASE_LAYER(ModsLeft,
+    XXX         &kp LGUI     &kp C_BRI_DN  &kp C_BRI_UP XXX   , &kp Y  &kp U  &kp I     &kp O   &kp P,
+    &kp LSHIFT  &mo ARIGHT   &kp LALT      &kp LCTRL    XXX   , &kp H  &kp J  &kp K     &kp L   &kp SEMICOLON  ,
+    XXX         XXX          XXX           XXX          XXX   , &kp N  &kp M  &kp COMMA &kp DOT &kp SLASH ,
+                                                     XXX  XXX ,  XXX   XXX
+      )
+
+//MODSR
+ZMK_BASE_LAYER(ModsRight,
+   &kp Q  &kp W &kp E &kp R &kp T  , XXX    &kp C_VOL_UP  &kp C_VOL_DN  &kp LGUI    XXX   ,
+    &kp A  &kp S &kp D &kp F &kp G , XXX &kp LCTRL     &kp LALT      &mo ALEFT   &kp RSHIFT ,
+    &kp Z  &kp X &kp C &kp V &kp B , XXX    &kp C_MUTE    XXX          XXX          XXX        ,
+                                                     XXX  XXX ,  XXX   XXX
       )
 
 // RRIGHT base
