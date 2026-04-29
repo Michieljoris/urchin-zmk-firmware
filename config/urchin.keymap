@@ -11,10 +11,9 @@
 
 // Layer definitions
 #define BASE 0
-#define BASEM 1
+#define RRIGHT 0
+#define RLEFT 0
 #define ALEFT 2
-#define ALEFTL 3
-#define ALEFTM 4
 #define ARIGHT 5
 #define AMOUSE 6
 #define SETTINGS 7
@@ -27,6 +26,10 @@
 &lt { // layer-tap
   flavor = "balanced";
   tapping-term-ms = <200>;
+  quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+&mt { // layer-tap
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
@@ -49,18 +52,32 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 #endif
 
 //https://zmk.dev/docs/keymaps/list-of-keycodes
-#define BASE_LAYER(NAME, OS_LEFT) \
-  ZMK_BASE_LAYER(NAME,                                                  \
-                 &kp Q           &hml LGUI W   &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &hml LGUI O     &kp P     , \
-                 &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L     &hmr RSHIFT SEMICOLON , \
-                 &kp Z           &lt AMOUSE X  &kp C        &kp V         &kp B   ,   &kp N     &kp M         &kp COMMA    &lt OS_LEFT DOT &kp SLASH      , \
-                                         &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mt LG(LC(LALT)) SPC \
+
+// BASE
+ZMK_BASE_LAYER(NAME,
+      &kp Q           &kp W         &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &kp O  &kp P     ,
+      &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
+      &kp Z           &lt AMOUSE X  &kp C        &hml LGUI  V  &kp B   ,   &kp N     &hml LGUI M         &kp COMMA    &kp DOT      &kp SLASH      ,
+      &lt RLEFT SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &lt RRIGHT SPC
+      )
+
+// RRIGHT base
+ZMK_BASE_LAYER(RevRight,
+      &kp Q           &kp W         &kp E        &kp R         &kp T   , &kp T  &kp R  &kp E  &kp W  &kp Q  ,
+      &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   , &kp G  &kp F  &kp D  &kp S  &kp A  ,
+      &kp Z           &lt AMOUSE X  &kp C        &hml LGUI V   &kp B   , &kp B  &kp V  &kp C  &kp X  &kp Z  ,
+                              &lt RLEFT SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC XXX
+      )
+
+//RLEFT base
+ZMK_BASE_LAYER(RevLeft,
+      &kp P          &kp O    &kp I      &kp U  &kp Y  ,   &kp Y     &kp U         &kp I        &kp O        &kp P     ,
+      &kp SEMICOLON  &kp L    &kp K      &kp J  &kp H  ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
+      &kp SLASH      &kp DOT  &kp COMMA  &kp M  &kp N  ,   &kp N     &hml LGUI M   &kp COMMA    &kp DOT      &kp SLASH      ,
+                              XXX &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &lt RRIGHT SPC
                  )
 
-BASE_LAYER(Base, ALEFTL)
-
-BASE_LAYER(BaseM, ALEFTM)
-
+//LEFT nav layer
 ZMK_BASE_LAYER(Left,
     XXX      XXX         XXX           XXX     XXX ,  XXX   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP   ,
     &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END XXX ,  XXX   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT ,
@@ -68,20 +85,7 @@ ZMK_BASE_LAYER(Left,
                                    &kp DEL &kp DEL ,   &kp DEL &kp DEL
                  )
 
-ZMK_BASE_LAYER(LeftL,
-    &kp LC(Q)   &kp LC(W)   &kp LC(E) &kp LC(R)  &kp LC(T)  , XXX XXX XXX XXX XXX ,
-    &kp LC(A)   &kp LC(S)   XXX       &kp LC(F)  &kp LC(G)  , XXX XXX XXX XXX XXX ,
-    &kp LC(Z)   &kp LC(X)   &kp LC(C) &kp LC(V)  XXX        , XXX XXX XXX XXX XXX ,
-            XXX XXX , XXX XXX
-           )
-
-ZMK_BASE_LAYER(LeftM,
-    &kp LG(Q)   &kp LG(W)   &kp LG(E) &kp LG(R)  &kp LG(T)  , XXX XXX XXX XXX XXX ,
-    &kp LG(A)   &kp LG(S)   XXX       &kp LG(F)  &kp LG(G)  , XXX XXX XXX XXX XXX ,
-    &kp LG(Z)   &kp LG(X)   &kp LG(C) &kp LG(V)  XXX        , XXX XXX XXX XXX XXX ,
-          XXX XXX , XXX XXX
-           )
-
+//RIGHT cursor keys and symbols layer
 ZMK_BASE_LAYER(Right,
     XXX         &kp LGUI &kp C_BRI_DN  &kp C_BRI_UP  XXX   ,   &kp GRAVE &kp MINUS  &kp EQUAL  &kp BSPC    &kp BACKSLASH  ,
     &kp LSHIFT  XXX      &kp LALT      &kp LCTRL     XXX   ,   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT   &kp SQT        ,
@@ -89,6 +93,7 @@ ZMK_BASE_LAYER(Right,
                                          &kp BSPC &kp BSPC ,   &kp BSPC &kp BSPC
 )
 
+//MOUSE
 ZMK_BASE_LAYER(Mouse,
     XXX  XXX  XXX  XXX  XXX  ,  XXX     XXX       U_MS_U     XXX       U_WH_U  ,
     XXX  XXX  XXX  XXX  XXX  ,  U_WH_L  U_MS_L    U_MS_D     U_MS_R    U_WH_R  ,
@@ -96,9 +101,10 @@ ZMK_BASE_LAYER(Mouse,
                     XXX  XXX ,  XXX   XXX
 )
 
+// SETTINGS
 ZMK_BASE_LAYER(Settings,
    &studio_unlock &out OUT_USB &out OUT_BLE XXX          &sys_reset   , &sys_reset    XXX           XXX           XXX               &studio_unlock ,
    &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 , &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4      ,
-   &bt BT_CLR     &to BASE     &to BASEM     XXX        &bootloader  , &bootloader   XXX            &to BASE      &to BASEM      XXX ,
+   &bt BT_CLR     &to BASE     &to BASEM     XXX        &bootloader  , &bootloader   &to RLEFT    &to BASE      &to RRIGHT      XXX ,
                                                               XXX XXX ,   XXX XXX
 )

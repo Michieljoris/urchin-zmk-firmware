@@ -56,9 +56,32 @@ ZMK_LEADER_SEQUENCE(el_omega,   &uc UC_EL_OMEGA,      E W)  // ω
 #ifdef CONFIG_WIRELESS
 ZMK_LEADER_SEQUENCE(usb,        &out OUT_USB,   U S B)
 ZMK_LEADER_SEQUENCE(ble,        &out OUT_BLE,   B L E)
+
+ZMK_LEADER_SEQUENCE(bts1,        &out BT_SEL 0,   B T S 1)
+ZMK_LEADER_SEQUENCE(bts2,        &out BT_SEL 1,   B T S 2)
+ZMK_LEADER_SEQUENCE(bts3,        &out BT_SEL 2,   B T S 3)
+ZMK_LEADER_SEQUENCE(bts4,        &out BT_SEL 3,   B T S 4)
+ZMK_LEADER_SEQUENCE(bts5,        &out BT_SEL 4,   B T S 5)
+
+ZMK_LEADER_SEQUENCE(btd1,        &out BT_DISC 0,   B T D 1)
+ZMK_LEADER_SEQUENCE(btd2,        &out BT_DISC 1,   B T D 2)
+ZMK_LEADER_SEQUENCE(btd3,        &out BT_DISC 2,   B T D 3)
+ZMK_LEADER_SEQUENCE(btd4,        &out BT_DISC 3,   B T D 4)
+ZMK_LEADER_SEQUENCE(btd5,        &out BT_DISC 4,   B T D 5)
+
+ZMK_LEADER_SEQUENCE(btcl,        &out BT_CLR,   B T C L)
+ZMK_LEADER_SEQUENCE(btcl,        &out BT_CLR,   B T A L L)
+
 #endif // CONFIG_WIRELESS
-ZMK_LEADER_SEQUENCE(reset,      &sys_reset,     R E S E T)
-ZMK_LEADER_SEQUENCE(boot,       &bootloader,    B O O T)
+
+ZMK_LEADER_SEQUENCE(reset,   &sys_reset,     R E S E T)
+ZMK_LEADER_SEQUENCE(boot,    &bootloader,    B O O T)
+ZMK_LEADER_SEQUENCE(unlock,  &studio_unlock, U N L)
+ZMK_LEADER_SEQUENCE(off,     &soft_off,      O F F)
+
+ZMK_LEADER_SEQUENCE(base,    &to BASE,    B A S E)
+ZMK_LEADER_SEQUENCE(rleft,    &to RLEFT,    L E F)
+ZMK_LEADER_SEQUENCE(rright,    &to RRIGHT,    R I G)
 
 #define TEXT(NAME,BINDINGS) \
 / { \
@@ -75,26 +98,34 @@ ZMK_LEADER_SEQUENCE(boot,       &bootloader,    B O O T)
 
 #define COM ,
 
-// Michiel
-TEXT(me, <&macro_press &kp LSHFT>
-     COM <&macro_tap &kp M>
+#define SPACE COM &kp SPACE
+
+#define FCAP (key) \
+     <&macro_press &kp LSHFT> \
+     COM <&macro_tap &kp key> \
      COM <&macro_release &kp LSHFT>
-     COM <&macro_tap &kp I &kp C &kp H &kp I &kp E &kp L>
-     )
+
+#define CAP(key) \
+     COM FCAP(key)
+
+#define W5(K1, K2, K3, K4, K5, K6) \
+  COM <&macro_tap &kp K1 &kp K2 &kp K3 &kp K4 &kp K5 &kp K6>
+
+#define W3(K1, K2, K3) \
+  COM <&macro_tap &kp K1 &kp K2 &kp K3>
+#define W5(K1, K2, K3, K4, K5)
+  COM <&macro_tap &kp K1 &kp K2 &kp K3 &kp K4 &kp K5>
+#define W6(K1, K2, K3, K4, K5, K6)
+  COM <&macro_tap &kp K1 &kp K2 &kp K3 &kp K4 &kp K5 &kp K6>
+
+#define LTEXT(NAME, SEQ, BINDINGS) \
+  TEXT(NAME, BINDINGS) \
+  ZMK_LEADER_SEQUENCE(NAME, &NAME, SEQ)
+
+// Michiel
+LTEXT(me, M E,
+      FCAP(M) W6(I, C, H, I, E, L))
 
 // Michiel van Oosten
-TEXT(mvo, <&macro_press &kp LSHFT>
-     COM <&macro_tap &kp M>
-     COM <&macro_release &kp LSHFT>
-     COM <&macro_tap &kp I &kp C &kp H &kp I &kp E &kp L>
-     COM <&macro_tap &kp SPACE>
-     COM <&macro_tap &kp V &kp A &kp N>
-     COM <&macro_tap &kp SPACE>
-     COM <&macro_press &kp LSHFT>
-     COM <&macro_tap &kp O>
-     COM <&macro_release &kp LSHFT>
-     COM <&macro_tap &kp O &kp S &kp T &kp E &kp N>
-     )
-
-ZMK_LEADER_SEQUENCE(me,  &me, M E)
-ZMK_LEADER_SEQUENCE(mvo, &mvo, M V O)
+LTEXT(mvo, M V O,
+     FCAP(M) W6(I, C, H, I, E, L) SPACE W3(V, A, N) SPACE CAP(O) W5(O, S, T, E, R))

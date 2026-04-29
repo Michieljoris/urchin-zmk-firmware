@@ -26,7 +26,7 @@ To achieve the above:
 - combos for numbers which become fn keys on the alternate layer
 - any symbol that's not a shifted number is on the alternate layer together with keys not covered by the finger keys such as [], {}, -, =, `, \.
 - media and nav keys fill up some more of the alternate layer
-- leader key for settings such as bluetooth, reset etc.
+- leader key for settings such as bluetooth, reset, base layer change etc.
 
 Design principles:
 - qwerty layout for all keys covered by the keys available, and logical placement of combos for the rest. Eg. the backtick is on a combo in the left hand, top row. 
@@ -35,9 +35,11 @@ Design principles:
 - brackets, braces, parents etc should be easily accessible, the opening type especially, since editors automatically supply the closing one.
 - cursor keys, home/end/pgup/pgdown keys, as combos should be logically placed.
 - return, tab and esc are on central combos
-- the 4 mod keys should be combineable in all permutations and with any key, and persistent if needed (not one shot)
+- the 4 mod keys should be combineable in all permutations and with any key, and be 'holdable; (not one shot)
 - numbers and fn keys should be in same place
-- an extra, optional layer. Right hand part is activated by the left hand, the left hand one by the right hand. Conceptually this is 'one' layer, but a few media keys can be snuck in to the activating side. 
+- an extra, optional layer. Right hand part is activated by the left hand, the left hand one by the right hand. Conceptually this is one layer, but a few media keys can be snuck in to the activating side. 
+- 
+
 
 For local zmk build:
 - follow instructions on zmk site ... link
