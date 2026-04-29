@@ -264,8 +264,8 @@ path.combo {
 <g transform="translate(221, 221) rotate(15.0)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPC</text>
-<a href="#RevLeft">
-<text x="0" y="24" class="key hold layer-activator">RevLeft</text>
+<a href="#BmLeft">
+<text x="0" y="24" class="key hold layer-activator">BmLeft</text>
 </a></g>
 <g transform="translate(279, 245) rotate(30.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -280,8 +280,8 @@ path.combo {
 <g transform="translate(451, 221) rotate(-15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPC</text>
-<a href="#RevRight">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 88%">RevRight</tspan></text>
+<a href="#BmRight">
+<text x="0" y="24" class="key hold layer-activator">BmRight</text>
 </a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="51" width="28" height="26" class="combo"/>
@@ -356,12 +356,10 @@ path.combo {
 <text x="112" y="104" class="combo hold">&amp;moa 4</text>
 </g>
 <g class="combo combopos-15">
-<path d="M84,111 l-39,19" class="combo"/>
-<path d="M84,111 l39,-19" class="combo"/>
-<rect rx="6" ry="6" x="70" y="98" width="28" height="26" class="combo"/>
-<text x="84" y="111" class="combo tap">
-<tspan x="84" dy="-0.6em" style="font-size: 88%">&amp;hml</tspan><tspan x="84" dy="1.2em" style="font-size: 88%">LS(LALT)</tspan>
-</text>
+<path d="M336,137 l-289,0" class="combo"/>
+<path d="M336,137 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="322" y="124" width="28" height="26" class="combo"/>
+<text x="336" y="137" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 <g class="combo combopos-16">
 <path d="M112,119 l-66,14" class="combo"/>
@@ -481,6 +479,38 @@ path.combo {
 <text x="532" y="157" class="combo tap">N</text>
 </g>
 <g class="combo combopos-36">
+<path d="M532,73 l-39,19" class="combo"/>
+<path d="M532,73 l39,-19" class="combo"/>
+<rect rx="6" ry="6" x="518" y="60" width="28" height="26" class="combo"/>
+<text x="532" y="73" class="combo tap">BSPC</text>
+</g>
+<g class="combo combopos-37">
+<path d="M560,91 l-65,7" class="combo"/>
+<path d="M560,91 l65,-7" class="combo"/>
+<rect rx="6" ry="6" x="546" y="78" width="28" height="26" class="combo"/>
+<text x="560" y="91" class="combo tap">DELETE</text>
+</g>
+<g class="combo combopos-38">
+<path d="M532,129 l-39,19" class="combo"/>
+<path d="M532,129 l39,-19" class="combo"/>
+<rect rx="6" ry="6" x="518" y="116" width="28" height="26" class="combo"/>
+<text x="532" y="129" class="combo tap">[</text>
+</g>
+<g class="combo combopos-39">
+<path d="M560,147 l-65,7" class="combo"/>
+<path d="M560,147 l65,-7" class="combo"/>
+<rect rx="6" ry="6" x="546" y="134" width="28" height="26" class="combo"/>
+<text x="560" y="147" class="combo tap">]</text>
+</g>
+<g class="combo combopos-40">
+<path d="M84,111 l-39,19" class="combo"/>
+<path d="M84,111 l39,-19" class="combo"/>
+<rect rx="6" ry="6" x="70" y="98" width="28" height="26" class="combo"/>
+<text x="84" y="111" class="combo tap">
+<tspan x="84" dy="-0.6em" style="font-size: 88%">&amp;hml</tspan><tspan x="84" dy="1.2em" style="font-size: 88%">LS(LALT)</tspan>
+</text>
+</g>
+<g class="combo combopos-41">
 <path d="M177,99 l-131,-15" class="combo"/>
 <path d="M177,99 l59,-37" class="combo"/>
 <path d="M177,99 l61,53" class="combo"/>
@@ -489,10 +519,19 @@ path.combo {
 <text x="177" y="99" class="combo tap layer-activator"><tspan style="font-size: 88%">Settings</tspan></text>
 </a><text x="177" y="110" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-42">
+<path d="M495,99 l131,-15" class="combo"/>
+<path d="M495,99 l-59,-37" class="combo"/>
+<path d="M495,99 l-61,53" class="combo"/>
+<rect rx="6" ry="6" x="481" y="86" width="28" height="26" class="combo"/>
+<a href="#Settings">
+<text x="495" y="99" class="combo tap layer-activator"><tspan style="font-size: 88%">Settings</tspan></text>
+</a><text x="495" y="110" class="combo hold">toggle</text>
 </g>
 </g>
-<g transform="translate(30, 339)" class="layer-RevRight">
-<text x="0" y="28" class="label" id="RevRight">RevRight:</text>
+</g>
+<g transform="translate(30, 339)" class="layer-BmRight">
+<text x="0" y="28" class="label" id="BmRight">BmRight:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 81)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -625,8 +664,8 @@ path.combo {
 <g transform="translate(221, 221) rotate(15.0)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPC</text>
-<a href="#RevLeft">
-<text x="0" y="24" class="key hold layer-activator">RevLeft</text>
+<a href="#BmLeft">
+<text x="0" y="24" class="key hold layer-activator">BmLeft</text>
 </a></g>
 <g transform="translate(279, 245) rotate(30.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -642,6 +681,12 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g class="combo combopos-0">
+<path d="M588,55 l39,19" class="combo"/>
+<path d="M588,55 l-39,-19" class="combo"/>
+<rect rx="6" ry="6" x="574" y="42" width="28" height="26" class="combo"/>
+<text x="588" y="55" class="combo tap">`</text>
+</g>
+<g class="combo combopos-1">
 <path d="M560,63 l66,14" class="combo"/>
 <path d="M560,63 l-66,-14" class="combo"/>
 <rect rx="6" ry="6" x="546" y="50" width="28" height="26" class="combo"/>
@@ -649,23 +694,23 @@ path.combo {
 <tspan x="560" dy="-0.6em">PAGE</tspan><tspan x="560" dy="1.2em">DOWN</tspan>
 </text>
 </g>
-<g class="combo combopos-1">
+<g class="combo combopos-2">
 <path d="M532,45 l37,1" class="combo"/>
 <path d="M532,45 l-37,-1" class="combo"/>
 <rect rx="6" ry="6" x="518" y="32" width="28" height="26" class="combo"/>
 <text x="532" y="45" class="combo tap">T</text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="490" y="79" width="28" height="26" class="combo"/>
 <text x="504" y="92" class="combo tap">TAB</text>
 <text x="504" y="103" class="combo hold"><tspan style="font-size: 78%">Alt+LCTRL</tspan></text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="546" y="80" width="28" height="26" class="combo"/>
 <text x="560" y="93" class="combo tap">ESC</text>
 <text x="560" y="104" class="combo hold">&amp;moa 4</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <path d="M588,111 l39,19" class="combo"/>
 <path d="M588,111 l-39,-19" class="combo"/>
 <rect rx="6" ry="6" x="574" y="98" width="28" height="26" class="combo"/>
@@ -673,41 +718,41 @@ path.combo {
 <tspan x="588" dy="-0.6em" style="font-size: 88%">&amp;hml</tspan><tspan x="588" dy="1.2em" style="font-size: 88%">LS(LALT)</tspan>
 </text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-6">
 <path d="M560,119 l66,14" class="combo"/>
 <path d="M560,119 l-66,-14" class="combo"/>
 <rect rx="6" ry="6" x="546" y="106" width="28" height="26" class="combo"/>
 <text x="560" y="119" class="combo tap">LEFT</text>
 <text x="560" y="130" class="combo hold"><tspan style="font-size: 78%">Sft+LCTRL</tspan></text>
 </g>
-<g class="combo combopos-6">
+<g class="combo combopos-7">
 <path d="M532,101 l37,1" class="combo"/>
 <path d="M532,101 l-37,-1" class="combo"/>
 <rect rx="6" ry="6" x="518" y="88" width="28" height="26" class="combo"/>
 <text x="532" y="101" class="combo tap">G</text>
 <text x="532" y="112" class="combo hold">&amp;moc 4</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-8">
 <rect rx="6" ry="6" x="546" y="136" width="28" height="26" class="combo"/>
 <text x="560" y="149" class="combo tap">END</text>
 </g>
-<g class="combo combopos-8">
+<g class="combo combopos-9">
 <rect rx="6" ry="6" x="602" y="163" width="28" height="26" class="combo"/>
 <text x="616" y="176" class="combo tap">HOME</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-10">
 <path d="M588,167 l39,19" class="combo"/>
 <path d="M588,167 l-39,-19" class="combo"/>
 <rect rx="6" ry="6" x="574" y="154" width="28" height="26" class="combo"/>
 <text x="588" y="167" class="combo tap">&amp;leader</text>
 </g>
-<g class="combo combopos-10">
+<g class="combo combopos-11">
 <path d="M560,175 l66,14" class="combo"/>
 <path d="M560,175 l-66,-14" class="combo"/>
 <rect rx="6" ry="6" x="546" y="162" width="28" height="26" class="combo"/>
 <text x="560" y="175" class="combo tap">DOWN</text>
 </g>
-<g class="combo combopos-11">
+<g class="combo combopos-12">
 <path d="M532,157 l37,1" class="combo"/>
 <path d="M532,157 l-37,-1" class="combo"/>
 <rect rx="6" ry="6" x="518" y="144" width="28" height="26" class="combo"/>
@@ -715,8 +760,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 678)" class="layer-RevLeft">
-<text x="0" y="28" class="label" id="RevLeft">RevLeft:</text>
+<g transform="translate(30, 678)" class="layer-BmLeft">
+<text x="0" y="28" class="label" id="BmLeft">BmLeft:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 81)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -860,8 +905,8 @@ path.combo {
 <g transform="translate(451, 221) rotate(-15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPC</text>
-<a href="#RevRight">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 88%">RevRight</tspan></text>
+<a href="#BmRight">
+<text x="0" y="24" class="key hold layer-activator">BmRight</text>
 </a></g>
 <g class="combo combopos-0">
 <path d="M84,55 l39,-19" class="combo"/>
@@ -939,6 +984,30 @@ path.combo {
 <path d="M140,157 l-37,1" class="combo"/>
 <rect rx="6" ry="6" x="126" y="144" width="28" height="26" class="combo"/>
 <text x="140" y="157" class="combo tap">N</text>
+</g>
+<g class="combo combopos-13">
+<path d="M140,73 l39,19" class="combo"/>
+<path d="M140,73 l-39,-19" class="combo"/>
+<rect rx="6" ry="6" x="126" y="60" width="28" height="26" class="combo"/>
+<text x="140" y="73" class="combo tap">BSPC</text>
+</g>
+<g class="combo combopos-14">
+<path d="M112,91 l65,7" class="combo"/>
+<path d="M112,91 l-65,-7" class="combo"/>
+<rect rx="6" ry="6" x="98" y="78" width="28" height="26" class="combo"/>
+<text x="112" y="91" class="combo tap">DELETE</text>
+</g>
+<g class="combo combopos-15">
+<path d="M140,129 l39,19" class="combo"/>
+<path d="M140,129 l-39,-19" class="combo"/>
+<rect rx="6" ry="6" x="126" y="116" width="28" height="26" class="combo"/>
+<text x="140" y="129" class="combo tap">[</text>
+</g>
+<g class="combo combopos-16">
+<path d="M112,147 l65,7" class="combo"/>
+<path d="M112,147 l-65,-7" class="combo"/>
+<rect rx="6" ry="6" x="98" y="134" width="28" height="26" class="combo"/>
+<text x="112" y="147" class="combo tap">]</text>
 </g>
 </g>
 </g>
@@ -1507,8 +1576,8 @@ path.combo {
 </g>
 <g transform="translate(84, 158)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#RevLeft">
-<text x="0" y="0" class="key tap layer-activator">RevLeft</text>
+<a href="#BmLeft">
+<text x="0" y="0" class="key tap layer-activator">BmLeft</text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(140, 140)" class="key keypos-22">
@@ -1519,8 +1588,8 @@ path.combo {
 </g>
 <g transform="translate(196, 156)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#RevRight">
-<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 88%">RevRight</tspan></text>
+<a href="#BmRight">
+<text x="0" y="0" class="key tap layer-activator">BmRight</text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(252, 164)" class="key keypos-24">
@@ -1533,8 +1602,8 @@ path.combo {
 </g>
 <g transform="translate(476, 156)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#RevLeft">
-<text x="0" y="0" class="key tap layer-activator">RevLeft</text>
+<a href="#BmLeft">
+<text x="0" y="0" class="key tap layer-activator">BmLeft</text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(532, 140)" class="key keypos-27">
@@ -1545,8 +1614,8 @@ path.combo {
 </g>
 <g transform="translate(588, 158)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#RevRight">
-<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 88%">RevRight</tspan></text>
+<a href="#BmRight">
+<text x="0" y="0" class="key tap layer-activator">BmRight</text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(644, 193)" class="key keypos-29">

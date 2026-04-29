@@ -1,7 +1,7 @@
 set -e
 
 COMMIT_COUNT=$(git rev-list --count HEAD)
-DSHIELD="urchin_left nice_view_adapter nice_view"
+SHIELD="urchin_left nice_view_adapter nice_view"
 DIR=$(pwd)
 VIEW=/Users/michiel/opt/nice-view-gem
 VIEW=""

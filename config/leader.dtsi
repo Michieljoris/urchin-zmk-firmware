@@ -55,20 +55,20 @@ ZMK_LEADER_SEQUENCE(el_omega,   &uc UC_EL_OMEGA,      E W)  // ω
 ZMK_LEADER_SEQUENCE(usb,        &out OUT_USB,   O U)
 ZMK_LEADER_SEQUENCE(ble,        &out OUT_BLE,   O B)
 
-ZMK_LEADER_SEQUENCE(bts1,        &out BT_SEL 0,   B T S 1)
-ZMK_LEADER_SEQUENCE(bts2,        &out BT_SEL 1,   B T S 2)
-ZMK_LEADER_SEQUENCE(bts3,        &out BT_SEL 2,   B T S 3)
-ZMK_LEADER_SEQUENCE(bts4,        &out BT_SEL 3,   B T S 4)
-ZMK_LEADER_SEQUENCE(bts5,        &out BT_SEL 4,   B T S 5)
+ZMK_LEADER_SEQUENCE(bts1,        &bt BT_SEL 0,   B T S 1)
+ZMK_LEADER_SEQUENCE(bts2,        &bt BT_SEL 1,   B T S 2)
+ZMK_LEADER_SEQUENCE(bts3,        &bt BT_SEL 2,   B T S 3)
+ZMK_LEADER_SEQUENCE(bts4,        &bt BT_SEL 3,   B T S 4)
+ZMK_LEADER_SEQUENCE(bts5,        &bt BT_SEL 4,   B T S 5)
 
-ZMK_LEADER_SEQUENCE(btd1,        &out BT_DISC 0,   B T D 1)
-ZMK_LEADER_SEQUENCE(btd2,        &out BT_DISC 1,   B T D 2)
-ZMK_LEADER_SEQUENCE(btd3,        &out BT_DISC 2,   B T D 3)
-ZMK_LEADER_SEQUENCE(btd4,        &out BT_DISC 3,   B T D 4)
-ZMK_LEADER_SEQUENCE(btd5,        &out BT_DISC 4,   B T D 5)
+ZMK_LEADER_SEQUENCE(btd1,        &bt BT_DISC 0,   B T D 1)
+ZMK_LEADER_SEQUENCE(btd2,        &bt BT_DISC 1,   B T D 2)
+ZMK_LEADER_SEQUENCE(btd3,        &bt BT_DISC 2,   B T D 3)
+ZMK_LEADER_SEQUENCE(btd4,        &bt BT_DISC 3,   B T D 4)
+ZMK_LEADER_SEQUENCE(btd5,        &bt BT_DISC 4,   B T D 5)
 
-ZMK_LEADER_SEQUENCE(btcl,        &out BT_CLR,   B T C S)
-ZMK_LEADER_SEQUENCE(btca,        &out BT_CLR,   B T C A)
+ZMK_LEADER_SEQUENCE(btcl,        &bt BT_CLR,     B T C S)
+ZMK_LEADER_SEQUENCE(btca,        &bt BT_CLR_ALL, B T C A)
 
 ZMK_LEADER_SEQUENCE(reset,   &sys_reset,     R E S E T)
 ZMK_LEADER_SEQUENCE(boot,    &bootloader,    B O O T)
@@ -76,8 +76,8 @@ ZMK_LEADER_SEQUENCE(unlock,  &studio_unlock, U N L)
 ZMK_LEADER_SEQUENCE(off,     &soft_off,      O F F)
 
 ZMK_LEADER_SEQUENCE(base,    &to BASE,    B A S E)
-ZMK_LEADER_SEQUENCE(rleft,    &to RLEFT,    B M R)
-ZMK_LEADER_SEQUENCE(rright,    &to RRIGHT,    B M R)
+ZMK_LEADER_SEQUENCE(rleft,  &to RLEFT,    B M R)
+ZMK_LEADER_SEQUENCE(rright,  &to RRIGHT,    B M R)
 
 #define TEXT(NAME,BINDINGS) \
 / { \
