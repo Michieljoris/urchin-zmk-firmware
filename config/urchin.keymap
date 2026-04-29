@@ -71,7 +71,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 //https://zmk.dev/docs/keymaps/list-of-keycodes
 
 // BASE
-ZMK_BASE_LAYER(NAME,
+ZMK_BASE_LAYER(Base,
       AS(Q)       &kp W         &kp E        &kp R         &kp T   ,   &kp Y     &kp U         &kp I        &kp O  &kp P     ,
       &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
       &kp Z           &lt AMOUSE X  &kp C        &hml LGUI  V  &kp B   ,   &kp N     &hml LGUI M         &kp COMMA    &kp DOT      &kp SLASH      ,
