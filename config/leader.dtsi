@@ -76,8 +76,7 @@ ZMK_LEADER_SEQUENCE(unlock,  &studio_unlock, U N)
 ZMK_LEADER_SEQUENCE(off,     &soft_off,      O F F)
 
 ZMK_LEADER_SEQUENCE(base,    &to BASE,    B A)
-ZMK_LEADER_SEQUENCE(rleft,  &to RLEFT,    B R)
-ZMK_LEADER_SEQUENCE(rright,  &to RRIGHT,    B R)
+ZMK_LEADER_SEQUENCE(bmirror,  &to BMIRROR,    B M)
 
 #define TEXT(NAME,BINDINGS) \
 / { \

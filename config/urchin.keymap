@@ -15,10 +15,11 @@
 #define MODSR 2
 #define RRIGHT 3
 #define RLEFT 4
-#define ALEFT 5
-#define ARIGHT 6
-#define AMOUSE 7
-#define SETTINGS 8
+#define BMIRROR 5
+#define ALEFT 6
+#define ARIGHT 7
+#define AMOUSE 8
+#define SETTINGS 9
 
 #define XXX &none
 #define ___ &trans
@@ -31,6 +32,26 @@
         wakeup-sources = <&kscan0>;
     };
 };
+
+/* / { */
+/*     combos { */
+/*         soft_off_waker_combo_l { */
+/*             timeout-ms = <50>; */
+/*             key-positions = <LT4 LH0>;  // update with the positions of the keys you want */
+/*             bindings = <&soft_off_waker>; */
+/*         }; */
+/*     }; */
+/* }; */
+
+/* / { */
+/*     combos { */
+/*         soft_off_waker_combo_r { */
+/*             timeout-ms = <50>; */
+/*             key-positions = <RT4 RH0>;  // update with the positions of the keys you want */
+/*             bindings = <&soft_off_waker>; */
+/*         }; */
+/*     }; */
+/* }; */
 
 &lt { // layer-tap
   flavor = "balanced";
@@ -123,7 +144,7 @@ ZMK_BASE_LAYER(BmRight,
     ___  ___  ___  ___  ___ , AS(T) AS(R) AS(E) AS(W) AS(Q) ,
     ___  ___  ___  ___  ___ , AS(G) AS(F) AS(D) AS(S) AS(A) ,
     ___  ___  ___  ___  ___ , AS(B) AS(V) AS(C) AS(X) AS(Z) ,
-                   XXX  XXX , XXX   XXX
+                   ___ ___ , ___  ___
       )
 
 //RLEFT base
@@ -131,8 +152,15 @@ ZMK_BASE_LAYER(BmLeft,
       AS(P)          AS(O)    AS(I)      AS(U)  AS(Y)  , ___  ___  ___  ___  ___  ,
       AS(SEMICOLON)  AS(L)    AS(K)      AS(J)  AS(H)  , ___  ___  ___  ___  ___  ,
       AS(SLASH)      AS(DOT)  AS(COMMA)  AS(M)  AS(N)  , ___  ___  ___  ___  ___  ,
-                       XXX   XXX   , XXX XXX
+                   ___ ___ , ___  ___
                  )
+//BMIRROR
+ZMK_BASE_LAYER(BMirror,
+    AS(P)          AS(O)    AS(I)      AS(U)  AS(Y) , AS(T) AS(R) AS(E) AS(W) AS(Q) ,
+   AS(SEMICOLON)  AS(L)    AS(K)      AS(J)  AS(H)  , AS(G) AS(F) AS(D) AS(S) AS(A) ,
+    AS(SLASH)      AS(DOT)  AS(COMMA)  AS(M)  AS(N) , AS(B) AS(V) AS(C) AS(X) AS(Z) ,
+                   ___ ___ , ___  ___
+      )
 
 //LEFT nav layer
 ZMK_BASE_LAYER(Left,
@@ -160,8 +188,8 @@ ZMK_BASE_LAYER(Mouse,
 
 // SETTINGS
 ZMK_BASE_LAYER(Settings,
-   &studio_unlock &out OUT_USB &out OUT_BLE &soft_off    &sys_reset   , &sys_reset    XXX           XXX           XXX               &studio_unlock ,
-   &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 , &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4      ,
-   &bt BT_CLR     &to RLEFT    &to BASE     &to RRIGHT   &bootloader  , &bootloader   &to RLEFT    &to BASE      &to RRIGHT      XXX ,
-                                                              XXX XXX ,   XXX XXX
+   &studio_unlock &out OUT_USB   &out OUT_BLE  &soft_off     &sys_reset   , &sys_reset    &soft_off     XXX           XXX          &studio_unlock ,
+   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4 , &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4      ,
+   &bt BT_CLR     &bt BT_CLR_ALL &to BMIRROR   XXX          &bootloader  , &bootloader   XXX          &to BMIRROR   XXX           XXX ,
+                                                     &to BASE &to BASE ,  &to BASE &to BASE
 )

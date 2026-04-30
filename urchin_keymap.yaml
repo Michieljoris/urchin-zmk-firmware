@@ -1,0 +1,659 @@
+layout: {zmk_keyboard: urchin}
+layers:
+  Base:
+  - - {t: Q, h: Sft+Q}
+    - {t: W, h: Sft+W}
+    - {t: E, h: Sft+E}
+    - {t: R, h: Sft+R}
+    - {t: T, h: Sft+T}
+    - {t: Y, h: Sft+Y}
+    - {t: U, h: Sft+U}
+    - {t: I, h: Sft+I}
+    - {t: O, h: Sft+O}
+    - {t: P, h: Sft+P}
+  - - {t: A, h: Sft+A}
+    - {t: S, h: Sft+S}
+    - {t: D, h: Sft+D}
+    - {t: F, h: Sft+F}
+    - {t: G, h: Sft+G}
+    - {t: H, h: Sft+H}
+    - {t: J, h: Sft+J}
+    - {t: K, h: Sft+K}
+    - {t: L, h: Sft+L}
+    - {t: ;, h: Sft+;}
+  - - {t: Z, h: Sft+Z}
+    - {t: X, h: Sft+X}
+    - {t: C, h: Sft+C}
+    - {t: V, h: Sft+V}
+    - {t: B, h: Sft+B}
+    - {t: N, h: Sft+N}
+    - {t: M, h: Sft+M}
+    - {t: ',', h: 'Sft+,'}
+    - {t: ., h: Sft+.}
+    - {t: /, h: Sft+/}
+  - - {t: ModsLeft, h: ModsLeft}
+    - {t: SPC, h: Gui+Ctl+LALT}
+    - {t: SPC, h: Gui+Ctl+LALT}
+    - {t: ModsRight, h: ModsRight}
+  ModsLeft:
+  - ['', '', BRI DN, BRI UP, '', Y, U, I, O, P]
+  - - {t: LSHIFT, h: sticky}
+    - {t: Right, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - ''
+    - H
+    - J
+    - K
+    - L
+    - ;
+  - - ''
+    - ''
+    - ''
+    - {t: LGUI, h: sticky}
+    - ''
+    - N
+    - M
+    - ','
+    - .
+    - /
+  - - {type: held}
+    - ''
+    - ''
+    - ''
+  ModsRight:
+  - [Q, W, E, R, T, '', VOL UP, VOL DN, MUTE, PP]
+  - - A
+    - S
+    - D
+    - F
+    - G
+    - ''
+    - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: Left, h: sticky}
+    - {t: RSHIFT, h: sticky}
+  - - Z
+    - X
+    - C
+    - V
+    - B
+    - ''
+    - {t: LGUI, h: sticky}
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - {type: held}
+  BmRight:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: T, h: Sft+T}
+    - {t: R, h: Sft+R}
+    - {t: E, h: Sft+E}
+    - {t: W, h: Sft+W}
+    - {t: Q, h: Sft+Q}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: G, h: Sft+G}
+    - {t: F, h: Sft+F}
+    - {t: D, h: Sft+D}
+    - {t: S, h: Sft+S}
+    - {t: A, h: Sft+A}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: B, h: Sft+B}
+    - {t: V, h: Sft+V}
+    - {t: C, h: Sft+C}
+    - {t: X, h: Sft+X}
+    - {t: Z, h: Sft+Z}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  BmLeft:
+  - - {t: P, h: Sft+P}
+    - {t: O, h: Sft+O}
+    - {t: I, h: Sft+I}
+    - {t: U, h: Sft+U}
+    - {t: Y, h: Sft+Y}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ;, h: Sft+;}
+    - {t: L, h: Sft+L}
+    - {t: K, h: Sft+K}
+    - {t: J, h: Sft+J}
+    - {t: H, h: Sft+H}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: /, h: Sft+/}
+    - {t: ., h: Sft+.}
+    - {t: ',', h: 'Sft+,'}
+    - {t: M, h: Sft+M}
+    - {t: N, h: Sft+N}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  BMirror:
+  - - {t: P, h: Sft+P}
+    - {t: O, h: Sft+O}
+    - {t: I, h: Sft+I}
+    - {t: U, h: Sft+U}
+    - {t: Y, h: Sft+Y}
+    - {t: T, h: Sft+T}
+    - {t: R, h: Sft+R}
+    - {t: E, h: Sft+E}
+    - {t: W, h: Sft+W}
+    - {t: Q, h: Sft+Q}
+  - - {t: ;, h: Sft+;}
+    - {t: L, h: Sft+L}
+    - {t: K, h: Sft+K}
+    - {t: J, h: Sft+J}
+    - {t: H, h: Sft+H}
+    - {t: G, h: Sft+G}
+    - {t: F, h: Sft+F}
+    - {t: D, h: Sft+D}
+    - {t: S, h: Sft+S}
+    - {t: A, h: Sft+A}
+  - - {t: /, h: Sft+/}
+    - {t: ., h: Sft+.}
+    - {t: ',', h: 'Sft+,'}
+    - {t: M, h: Sft+M}
+    - {t: N, h: Sft+N}
+    - {t: B, h: Sft+B}
+    - {t: V, h: Sft+V}
+    - {t: C, h: Sft+C}
+    - {t: X, h: Sft+X}
+    - {t: Z, h: Sft+Z}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Left:
+  - ['', '', '', '', '', '', VOL UP, VOL DN, LGUI, PP]
+  - - HOME
+    - PAGE UP
+    - PAGE DOWN
+    - END
+    - ''
+    - ''
+    - LCTRL
+    - LALT
+    - {type: held}
+    - RSHIFT
+  - ['', '', '', '', '', '', MUTE, '', '', '']
+  - - DEL
+    - DEL
+    - DEL
+    - {t: DEL, type: held}
+  Right:
+  - ['', LGUI, BRI DN, BRI UP, '', '`', '-', '=', BSPC, \]
+  - - LSHIFT
+    - {type: held}
+    - LALT
+    - LCTRL
+    - ''
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - ''''
+  - ['', '', '', '', '', '', Sft+9, '[', ']', Sft+0]
+  - - {t: BSPC, type: held}
+    - BSPC
+    - BSPC
+    - BSPC
+  Mouse:
+  - ['', '', '', '', '', '', '', '&mmv MOVE_UP', '', '&msc SCRL_UP']
+  - ['', '', '', '', '', '&msc SCRL_LEFT', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '&msc SCRL_RIGHT']
+  - ['', '', '', '', '', '', '&mkp LCLK', '&mkp MCLK', '&mkp RCLK', '&msc SCRL_DOWN']
+  - ['', '', '', '']
+  Settings:
+  - ['&studio_unlock', OUT USB, OUT BLE, '&soft_off', '&sys_reset', '&sys_reset', '&soft_off', '', '', '&studio_unlock']
+  - - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - {t: BT, h: '4'}
+    - {t: BT DISC, h: '0'}
+    - {t: BT DISC, h: '1'}
+    - {t: BT DISC, h: '2'}
+    - {t: BT DISC, h: '3'}
+    - {t: BT DISC, h: '4'}
+  - - BT CLR
+    - BT CLR ALL
+    - {t: BMirror, h: toggle}
+    - ''
+    - '&bootloader'
+    - '&bootloader'
+    - ''
+    - {t: BMirror, h: toggle}
+    - ''
+    - ''
+  - - {t: Base, h: toggle}
+    - {t: Base, h: toggle}
+    - {t: Base, h: toggle}
+    - {t: Base, h: toggle}
+combos:
+- p: [0, 1]
+  k: {t: '1', h: Sft+1}
+  l: [Base, ModsRight]
+- p: [1, 2]
+  k: {t: '3', h: Sft+3}
+  l: [Base, ModsRight]
+- p: [2, 3]
+  k: {t: '5', h: Sft+5}
+  l: [Base, ModsRight]
+- p: [10, 11]
+  k: {t: '2', h: Sft+2}
+  l: [Base, ModsRight]
+- p: [22, 23]
+  k: {t: '4', h: Sft+4}
+  l: [Base, ModsRight]
+- p: [6, 7]
+  k: {t: '6', h: Sft+6}
+  l: [Base, ModsLeft]
+- p: [7, 8]
+  k: {t: '8', h: Sft+8}
+  l: [Base, ModsLeft]
+- p: [8, 9]
+  k: {t: '0', h: Sft+0}
+  l: [Base, ModsLeft]
+- p: [18, 19]
+  k: {t: '9', h: Sft+9}
+  l: [Base, ModsLeft]
+- p: [26, 27]
+  k: {t: '7', h: Sft+7}
+  l: [Base, ModsLeft]
+- p: [0, 1]
+  k: F1
+  l: [Left]
+- p: [1, 2]
+  k: F3
+  l: [Left]
+- p: [2, 3]
+  k: F5
+  l: [Left]
+- p: [10, 11]
+  k: F2
+  l: [Left]
+- p: [22, 23]
+  k: F4
+  l: [Left]
+- p: [6, 7]
+  k: F6
+  l: [Right]
+- p: [7, 8]
+  k: F8
+  l: [Right]
+- p: [8, 9]
+  k: F10
+  l: [Right]
+- p: [18, 19]
+  k: F9
+  l: [Right]
+- p: [26, 27]
+  k: F7
+  l: [Right]
+- p: [0, 2]
+  k: {t: '`', h: Sft+`}
+  l: [Base, ModsRight]
+- p: [0, 3]
+  k: PAGE DOWN
+  l: [Base, ModsRight]
+- p: [1, 3]
+  k: {t: T, h: Sft+T}
+  l: [Base, ModsRight]
+- p: [12, 13]
+  k: {t: TAB, h: Sft+TAB}
+  l: [Base, ModsRight]
+- p: [11, 12]
+  k: ESC
+  l: [Base, ModsRight]
+- p: [10, 12]
+  k: '&caps_word'
+  l: [Base, ModsRight]
+- p: [10, 13]
+  k: LEFT
+  l: [Base, ModsRight]
+- p: [11, 13]
+  k: {t: G, h: Sft+G}
+  l: [Base, ModsRight]
+- p: [21, 22]
+  k: END
+  l: [Base, ModsRight]
+- p: [20, 21]
+  k: HOME
+  l: [Base, ModsRight]
+- p: [20, 22]
+  k: '&leader'
+  l: [Base, ModsRight]
+- p: [20, 23]
+  k: DOWN
+  l: [Base, ModsRight]
+- p: [21, 23]
+  k: B
+  l: [Base, ModsRight]
+- p: [30, 10]
+  k: LSHIFT
+  l: [Base]
+- p: [30, 11]
+  k: Right
+  l: [Base]
+- p: [30, 12]
+  k: LALT
+  l: [Base]
+- p: [30, 13]
+  k: LCTRL
+  l: [Base]
+- p: [30, 12]
+  k: LALT
+  l: [Base]
+- p: [30, 12, 11]
+  k: '&lm 6 LC(LALT)'
+  l: [Base]
+- p: [30, 12, 10]
+  k: Sft+LALT
+  l: [Base]
+- p: [30, 11]
+  k: Left
+  l: [Base]
+- p: [30, 11, 10]
+  k: '&lm 6 LSHIFT'
+  l: [Base]
+- p: [30, 10]
+  k: LSHIFT
+  l: [Base]
+- p: [30, 12, 11, 10]
+  k: '&lm 6 LA(LSHIFT)'
+  l: [Base]
+- p: [30, 13, 11, 10]
+  k: '&lm 6 LC(LSHIFT)'
+  l: [Base]
+- p: [30, 13, 12, 10]
+  k: Ctl+Alt+LSHIFT
+  l: [Base]
+- p: [30, 13, 12, 11]
+  k: '&lm 6 LC(LALT)'
+  l: [Base]
+- p: [30, 13, 12, 11, 10]
+  k: '&lm 6 LC(LA(LSHIFT))'
+  l: [Base]
+- p: [30, 23]
+  k: LGUI
+  l: [Base]
+- p: [30, 23, 12]
+  k: Alt+LGUI
+  l: [Base]
+- p: [30, 23, 10]
+  k: Sft+LGUI
+  l: [Base]
+- p: [30, 23, 11]
+  k: '&lm 6 LGUI'
+  l: [Base]
+- p: [7, 9]
+  k: \
+  l: [Base, ModsLeft]
+- p: [6, 9]
+  k: PAGE UP
+  l: [Base, ModsLeft]
+- p: [6, 8]
+  k: {t: Y, h: Sft+Y}
+  l: [Base, ModsLeft]
+- p: [16, 17]
+  k: RET
+  l: [Base, ModsLeft]
+- p: [17, 18]
+  k: ESC
+  l: [Base, ModsLeft]
+- p: [17, 19]
+  k: {t: '''', h: Sft+'}
+  l: [Base, ModsLeft]
+- p: [16, 19]
+  k: RIGHT
+  l: [Base, ModsLeft]
+- p: [16, 18]
+  k: {t: H, h: Sft+H}
+  l: [Base, ModsLeft]
+- p: [16, 17]
+  k: F11
+  l: [Right]
+- p: [17, 18]
+  k: F12
+  l: [Right]
+- p: [27, 28]
+  k: {t: '-', h: Sft+-}
+  l: [Base, ModsLeft]
+- p: [28, 29]
+  k: {t: '=', h: Sft+=}
+  l: [Base, ModsLeft]
+- p: [27, 29]
+  k: '&leader'
+  l: [Base, ModsLeft]
+- p: [26, 29]
+  k: UP
+  l: [Base, ModsLeft]
+- p: [26, 28]
+  k: N
+  l: [Base, ModsLeft]
+- p: [16, 8]
+  k: BSPC
+  l: [Base, ModsLeft]
+- p: [16, 9]
+  k: DELETE
+  l: [Base, ModsLeft]
+- p: [26, 18]
+  k: {t: '[', h: 'Sft+['}
+  l: [Base, ModsLeft]
+- p: [26, 19]
+  k: {t: ']', h: 'Sft+]'}
+  l: [Base, ModsLeft]
+- p: [33, 16]
+  k: LCTRL
+  l: [Base]
+- p: [33, 16, 17]
+  k: Alt+LCTRL
+  l: [Base]
+- p: [33, 16, 18]
+  k: '&lm 6 LCTRL'
+  l: [Base]
+- p: [33, 16, 19]
+  k: Sft+LCTRL
+  l: [Base]
+- p: [33, 17]
+  k: LALT
+  l: [Base]
+- p: [33, 17, 18]
+  k: '&lm 6 LC(LALT)'
+  l: [Base]
+- p: [33, 17, 19]
+  k: Sft+LALT
+  l: [Base]
+- p: [33, 18]
+  k: Left
+  l: [Base]
+- p: [33, 18, 19]
+  k: '&lm 6 LSHIFT'
+  l: [Base]
+- p: [33, 19]
+  k: LSHIFT
+  l: [Base]
+- p: [33, 17, 18, 19]
+  k: '&lm 6 LA(LSHIFT)'
+  l: [Base]
+- p: [33, 16, 18, 19]
+  k: '&lm 6 LC(LSHIFT)'
+  l: [Base]
+- p: [33, 16, 17, 19]
+  k: Ctl+Alt+LSHIFT
+  l: [Base]
+- p: [33, 16, 17, 18]
+  k: '&lm 6 LC(LALT)'
+  l: [Base]
+- p: [33, 16, 17, 18, 19]
+  k: '&lm 6 LC(LA(LSHIFT))'
+  l: [Base]
+- p: [33, 26]
+  k: LGUI
+  l: [Base]
+- p: [33, 26, 17]
+  k: Alt+LGUI
+  l: [Base]
+- p: [33, 26, 19]
+  k: Sft+LGUI
+  l: [Base]
+- p: [33, 26, 11]
+  k: '&lm 7 LGUI'
+  l: [Base]
+- p: [10, 19]
+  k: '&caps_word'
+  l: [Base]
+- p: [0, 4, 24]
+  k: {t: Settings, h: toggle}
+  l: [Base, BMirror]
+- p: [9, 5, 25]
+  k: {t: Settings, h: toggle}
+  l: [Base, BMirror]
+- p: [9, 8]
+  k: {t: '1', h: Sft+1}
+  l: [BMirror]
+- p: [8, 7]
+  k: {t: '3', h: Sft+3}
+  l: [BMirror]
+- p: [7, 6]
+  k: {t: '5', h: Sft+5}
+  l: [BMirror]
+- p: [19, 18]
+  k: {t: '2', h: Sft+2}
+  l: [BMirror]
+- p: [27, 26]
+  k: {t: '4', h: Sft+4}
+  l: [BMirror]
+- p: [3, 2]
+  k: {t: '6', h: Sft+6}
+  l: [BMirror]
+- p: [2, 1]
+  k: {t: '8', h: Sft+8}
+  l: [BMirror]
+- p: [1, 0]
+  k: {t: '0', h: Sft+0}
+  l: [BMirror]
+- p: [11, 10]
+  k: {t: '9', h: Sft+9}
+  l: [BMirror]
+- p: [23, 22]
+  k: {t: '7', h: Sft+7}
+  l: [BMirror]
+- p: [9, 7]
+  k: '`'
+  l: [BMirror]
+- p: [9, 6]
+  k: PAGE DOWN
+  l: [BMirror]
+- p: [8, 6]
+  k: T
+  l: [BMirror]
+- p: [17, 16]
+  k: {t: TAB, h: Sft+TAB}
+  l: [BMirror]
+- p: [18, 17]
+  k: ESC
+  l: [BMirror]
+- p: [19, 17]
+  k: '&hml LS(LALT)'
+  l: [BMirror]
+- p: [19, 16]
+  k: {t: LEFT, h: Sft+LCTRL}
+  l: [BMirror]
+- p: [18, 16]
+  k: {t: G, h: '&moc 7'}
+  l: [BMirror]
+- p: [28, 27]
+  k: END
+  l: [BMirror]
+- p: [29, 28]
+  k: HOME
+  l: [BMirror]
+- p: [29, 27]
+  k: '&leader'
+  l: [BMirror]
+- p: [29, 26]
+  k: DOWN
+  l: [BMirror]
+- p: [28, 26]
+  k: B
+  l: [BMirror]
+- p: [2, 0]
+  k: \
+  l: [BMirror]
+- p: [3, 0]
+  k: PAGE UP
+  l: [BMirror]
+- p: [3, 1]
+  k: Y
+  l: [BMirror]
+- p: [13, 12]
+  k: {t: RET, h: Ctl+LALT}
+  l: [BMirror]
+- p: [12, 11]
+  k: {t: ESC, h: '&moa 6'}
+  l: [BMirror]
+- p: [12, 10]
+  k: {t: '''', h: Alt+LSHIFT}
+  l: [BMirror]
+- p: [13, 10]
+  k: {t: RIGHT, h: Sft+LCTRL}
+  l: [BMirror]
+- p: [13, 11]
+  k: {t: H, h: '&moc 6'}
+  l: [BMirror]
+- p: [22, 21]
+  k: '-'
+  l: [BMirror]
+- p: [21, 20]
+  k: '='
+  l: [BMirror]
+- p: [22, 20]
+  k: '['
+  l: [BMirror]
+- p: [23, 20]
+  k: UP
+  l: [BMirror]
+- p: [23, 21]
+  k: N
+  l: [BMirror]
+- p: [13, 1]
+  k: BSPC
+  l: [BMirror]
+- p: [13, 0]
+  k: DELETE
+  l: [BMirror]
+- p: [23, 11]
+  k: '['
+  l: [BMirror]
+- p: [23, 10]
+  k: ']'
+  l: [BMirror]
