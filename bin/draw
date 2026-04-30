@@ -4,4 +4,4 @@ set -e
 #pipx install keymap-drawer
 
 rm -f urchin_keymap.ortho.svg
-uvx --from keymap-drawer keymap draw urchin_keymap.yaml >urchin_keymap.ortho.svg
+uvx --from keymap-drawer keymap -c draw2.config draw keymap.yaml >urchin_keymap.ortho.svg

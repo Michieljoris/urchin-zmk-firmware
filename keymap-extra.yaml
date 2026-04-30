@@ -1,0 +1,116 @@
+
+- p: [30, 10]
+  k: LSHIFT
+  l: [Combos]
+- p: [30, 11]
+  k: Right
+  l: [Combos]
+- p: [30, 12]
+  k: LALT
+  l: [Combos]
+- p: [30, 13]
+  k: LCTRL
+  l: [Combos]
+- p: [30, 12]
+  k: LALT
+  l: [Combos]
+- p: [30, 12, 11]
+  k: '&lm 3 LC(LALT)'
+  l: [Combos]
+- p: [30, 12, 10]
+  k: Sft+LALT
+  l: [Combos]
+- p: [30, 11]
+  k: Left
+  l: [Combos]
+- p: [30, 11, 10]
+  k: '&lm 3 LSHIFT'
+  l: [Combos]
+- p: [30, 10]
+  k: LSHIFT
+  l: [Combos]
+- p: [30, 12, 11, 10]
+  k: '&lm 3 LA(LSHIFT)'
+  l: [Combos]
+- p: [30, 13, 11, 10]
+  k: '&lm 3 LC(LSHIFT)'
+  l: [Combos]
+- p: [30, 13, 12, 10]
+  k: Ctl+Alt+LSHIFT
+  l: [Combos]
+- p: [30, 13, 12, 11]
+  k: '&lm 3 LC(LALT)'
+  l: [Combos]
+- p: [30, 13, 12, 11, 10]
+  k: '&lm 3 LC(LA(LSHIFT))'
+  l: [Combos]
+- p: [30, 23]
+  k: LGUI
+  l: [Combos]
+- p: [30, 23, 12]
+  k: Alt+LGUI
+  l: [Combos]
+- p: [30, 23, 10]
+  k: Sft+LGUI
+  l: [Combos]
+- p: [30, 23, 11]
+  k: '&lm 3 LGUI'
+  l: [Combos]
+
+- p: [33, 16]
+  k: LCTRL
+  l: [Combos]
+- p: [33, 16, 17]
+  k: Alt+LCTRL
+  l: [Combos]
+- p: [33, 16, 18]
+  k: '&lm 3 LCTRL'
+  l: [Combos]
+- p: [33, 16, 19]
+  k: Sft+LCTRL
+  l: [Combos]
+- p: [33, 17]
+  k: LALT
+  l: [Combos]
+- p: [33, 17, 18]
+  k: '&lm 3 LC(LALT)'
+  l: [Combos]
+- p: [33, 17, 19]
+  k: Sft+LALT
+  l: [Combos]
+- p: [33, 18]
+  k: Left
+  l: [Combos]
+- p: [33, 18, 19]
+  k: '&lm 3 LSHIFT'
+  l: [Combos]
+- p: [33, 19]
+  k: LSHIFT
+  l: [Combos]
+- p: [33, 17, 18, 19]
+  k: '&lm 3 LA(LSHIFT)'
+  l: [Combos]
+- p: [33, 16, 18, 19]
+  k: '&lm 3 LC(LSHIFT)'
+  l: [Combos]
+- p: [33, 16, 17, 19]
+  k: Ctl+Alt+LSHIFT
+  l: [Combos]
+- p: [33, 16, 17, 18]
+  k: '&lm 3 LC(LALT)'
+  l: [Combos]
+- p: [33, 16, 17, 18, 19]
+  k: '&lm 3 LC(LA(LSHIFT))'
+  l: [Combos]
+- p: [33, 26]
+  k: LGUI
+  l: [Combos]
+- p: [33, 26, 17]
+  k: Alt+LGUI
+  l: [Combos]
+- p: [33, 26, 19]
+  k: Sft+LGUI
+  l: [Combos]
+- p: [33, 26, 11]
+  k: '&lm 4 LGUI'
+  l: [Combos]
