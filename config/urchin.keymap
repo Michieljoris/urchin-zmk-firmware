@@ -25,6 +25,13 @@
 
 #define QUICK_TAP_MS 175
 
+/ {
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&kscan0>;
+    };
+};
+
 &lt { // layer-tap
   flavor = "balanced";
   tapping-term-ms = <200>;
@@ -35,14 +42,14 @@
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
-/* #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \ */
-/*   ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \ */
-/*                tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \ */
-/*                require-prior-idle-ms = <150>; hold-trigger-on-release;         \ */
-/*                hold-trigger-key-positions = <TRIGGER_POS>;) */
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
+  ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
+               tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \
+               require-prior-idle-ms = <150>; hold-trigger-on-release;         \
+               hold-trigger-key-positions = <TRIGGER_POS>;)
 
-/* MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs. */
-/* MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs. */
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -55,6 +62,22 @@
             quick_tap_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+    };
+};
+
+#define MO_SL(layer) &mo_sl layer layer
+
+/ {
+    behaviors {
+        mo_sl: mo_sl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            quick_tap_ms = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&sl>;
+            display-name = "Mo-Sl";
         };
     };
 };
@@ -76,40 +99,39 @@ ZMK_BASE_LAYER(Base,
       AS(Q)       AS(W)         AS(E)  AS(R)  AS(T)   ,   AS(Y)     AS(U)  AS(I)       AS(O)    AS(P)     ,
       AS(A)       AS(S)         AS(D)  AS(F)  AS(G)   ,   AS(H)     AS(J)  AS(K)        AS(L)   AS(SEMICOLON) ,
       AS(Z)       AS(X)         AS(C)  AS(V)  AS(B)   ,   AS(N)     AS(M)  AS(COMMA)    AS(DOT) AS(SLASH)      ,
-                   /* &lt MODSL SPC   &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &lt MODSR SPC */
-                   &sl MODSL   &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &sl MODSR
+             &mo_sl MODSL MODSL   &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mo_sl MODSR MODSR
       )
 
 //MODSL
 ZMK_BASE_LAYER(ModsLeft,
-    XXX         &kp LGUI     &kp C_BRI_DN  &kp C_BRI_UP XXX   , &kp Y  &kp U  &kp I     &kp O   &kp P,
-    &kp LSHIFT  &mo ARIGHT   &kp LALT      &kp LCTRL    XXX   , &kp H  &kp J  &kp K     &kp L   &kp SEMICOLON  ,
-    XXX         XXX          XXX           XXX          XXX   , &kp N  &kp M  &kp COMMA &kp DOT &kp SLASH ,
-                                                     XXX  XXX ,  XXX   XXX
+    XXX        XXX        &kp C_BRI_DN &kp C_BRI_UP XXX , &kp Y &kp U &kp I     &kp O   &kp P         ,
+    &sk LSHIFT &sl ARIGHT &sk LALT     &sk LCTRL    XXX , &kp H &kp J &kp K     &kp L   &kp SEMICOLON ,
+    XXX        XXX        XXX          &sk LGUI     XXX , &kp N &kp M &kp COMMA &kp DOT &kp SLASH     ,
+                                       XXX          XXX , XXX   XXX
       )
 
 //MODSR
 ZMK_BASE_LAYER(ModsRight,
-   &kp Q  &kp W &kp E &kp R &kp T  , XXX    &kp C_VOL_UP  &kp C_VOL_DN  &kp LGUI    XXX   ,
-    &kp A  &kp S &kp D &kp F &kp G , XXX &kp LCTRL     &kp LALT      &mo ALEFT   &kp RSHIFT ,
-    &kp Z  &kp X &kp C &kp V &kp B , XXX    &kp C_MUTE    XXX          XXX          XXX        ,
-                                                     XXX  XXX ,  XXX   XXX
+    &kp Q  &kp W &kp E &kp R &kp T , XXX &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_PP   ,
+    &kp A  &kp S &kp D &kp F &kp G , XXX &sk LCTRL   &sk LALT     &sl ALEFT   &sk RSHIFT ,
+    &kp Z  &kp X &kp C &kp V &kp B , XXX &sk LGUI    XXX          XXX          XXX       ,
+                       XXX   XXX   , XXX XXX
       )
 
 // RRIGHT base
 ZMK_BASE_LAYER(BmRight,
-      &kp Q           &kp W         &kp E        &kp R         &kp T   , &kp T  &kp R  &kp E  &kp W  &kp Q  ,
-      &hml LSHIFT A   &lt ARIGHT S  &hml LALT D  &hml LCTRL F  &kp G   , &kp G  &kp F  &kp D  &kp S  &kp A  ,
-      &kp Z           &lt AMOUSE X  &kp C        &hml LGUI V   &kp B   , &kp B  &kp V  &kp C  &kp X  &kp Z  ,
-                              &lt RLEFT SPC &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC XXX
+    ___  ___  ___  ___  ___ , AS(T) AS(R) AS(E) AS(W) AS(Q) ,
+    ___  ___  ___  ___  ___ , AS(G) AS(F) AS(D) AS(S) AS(A) ,
+    ___  ___  ___  ___  ___ , AS(B) AS(V) AS(C) AS(X) AS(Z) ,
+                   XXX  XXX , XXX   XXX
       )
 
 //RLEFT base
 ZMK_BASE_LAYER(BmLeft,
-      &kp P          &kp O    &kp I      &kp U  &kp Y  ,   &kp Y     &kp U         &kp I        &kp O        &kp P     ,
-      &kp SEMICOLON  &kp L    &kp K      &kp J  &kp H  ,   &kp H     &hmr LCTRL J  &hmr LALT K  &lt ALEFT L  &hmr RSHIFT SEMICOLON ,
-      &kp SLASH      &kp DOT  &kp COMMA  &kp M  &kp N  ,   &kp N     &hml LGUI M   &kp COMMA    &kp DOT      &kp SLASH      ,
-                              XXX &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &lt RRIGHT SPC
+      AS(P)          AS(O)    AS(I)      AS(U)  AS(Y)  , ___  ___  ___  ___  ___  ,
+      AS(SEMICOLON)  AS(L)    AS(K)      AS(J)  AS(H)  , ___  ___  ___  ___  ___  ,
+      AS(SLASH)      AS(DOT)  AS(COMMA)  AS(M)  AS(N)  , ___  ___  ___  ___  ___  ,
+                       XXX   XXX   , XXX XXX
                  )
 
 //LEFT nav layer
@@ -138,7 +160,7 @@ ZMK_BASE_LAYER(Mouse,
 
 // SETTINGS
 ZMK_BASE_LAYER(Settings,
-   &studio_unlock &out OUT_USB &out OUT_BLE XXX          &sys_reset   , &sys_reset    XXX           XXX           XXX               &studio_unlock ,
+   &studio_unlock &out OUT_USB &out OUT_BLE &soft_off    &sys_reset   , &sys_reset    XXX           XXX           XXX               &studio_unlock ,
    &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 , &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4      ,
    &bt BT_CLR     &to RLEFT    &to BASE     &to RRIGHT   &bootloader  , &bootloader   &to RLEFT    &to BASE      &to RRIGHT      XXX ,
                                                               XXX XXX ,   XXX XXX
