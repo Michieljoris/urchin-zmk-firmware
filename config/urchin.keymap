@@ -11,20 +11,30 @@
 
 // Layer definitions
 #define BASE 0
-#define MODSL 1
-#define MODSR 2
-#define RRIGHT 3
-#define RLEFT 4
-#define BMIRROR 5
-#define ALEFT 6
-#define ARIGHT 7
-#define AMOUSE 8
-#define SETTINGS 9
+#define MODS 1
+#define BMIRROR 2
+#define ALEFT 3
+#define ARIGHT 4
+#define AMOUSE 5
+#define SETTINGS 6
 
 #define XXX &none
 #define ___ &trans
 
 #define QUICK_TAP_MS 175
+
+
+/ {
+    behaviors {
+        my_soft_off: z_so_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            split-peripheral-off-on-press;
+        };
+    };
+};
+
+
 
 / {
     soft_off_wakers {
@@ -120,42 +130,20 @@ ZMK_BASE_LAYER(Base,
       AS(Q)       AS(W)         AS(E)  AS(R)  AS(T)   ,   AS(Y)     AS(U)  AS(I)       AS(O)    AS(P)     ,
       AS(A)       AS(S)         AS(D)  AS(F)  AS(G)   ,   AS(H)     AS(J)  AS(K)        AS(L)   AS(SEMICOLON) ,
       AS(Z)       AS(X)         AS(C)  AS(V)  AS(B)   ,   AS(N)     AS(M)  AS(COMMA)    AS(DOT) AS(SLASH)      ,
-             &mo_sl MODSL MODSL   &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mo_sl MODSR MODSR
+             &mo_sl BMIRROR MODS   &mt LG(LC(LALT)) SPC, &mt LG(LC(LALT)) SPC &mo_sl BMIRROR MODS
       )
 
-//MODSL
-ZMK_BASE_LAYER(ModsLeft,
-    XXX        XXX        &kp C_BRI_DN &kp C_BRI_UP XXX , &kp Y &kp U &kp I     &kp O   &kp P         ,
-    &sk LSHIFT &sl ARIGHT &sk LALT     &sk LCTRL    XXX , &kp H &kp J &kp K     &kp L   &kp SEMICOLON ,
-    XXX        XXX        XXX          &sk LGUI     XXX , &kp N &kp M &kp COMMA &kp DOT &kp SLASH     ,
-                                       XXX          XXX , XXX   XXX
-      )
 
-//MODSR
-ZMK_BASE_LAYER(ModsRight,
-    &kp Q  &kp W &kp E &kp R &kp T , XXX &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_PP   ,
-    &kp A  &kp S &kp D &kp F &kp G , XXX &sk LCTRL   &sk LALT     &sl ALEFT   &sk RSHIFT ,
-    &kp Z  &kp X &kp C &kp V &kp B , XXX &sk LGUI    XXX          XXX          XXX       ,
+//MODS
+ZMK_BASE_LAYER(Mods,
+    XXX        XXX        &kp C_BRI_DN &kp C_BRI_UP XXX , XXX &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_PP   ,
+    &sk LSHIFT &sl ARIGHT &sk LALT     &sk LCTRL    XXX , XXX &sk LCTRL    &sk LALT     &sl ALEFT   &sk RSHIFT ,
+    XXX        &sl AMOUSE  XXX          &sk LGUI     XXX , XXX &sk LGUI     XXX          XXX         XXX       ,
                        XXX   XXX   , XXX XXX
       )
 
-// RRIGHT base
-ZMK_BASE_LAYER(BmRight,
-    ___  ___  ___  ___  ___ , AS(T) AS(R) AS(E) AS(W) AS(Q) ,
-    ___  ___  ___  ___  ___ , AS(G) AS(F) AS(D) AS(S) AS(A) ,
-    ___  ___  ___  ___  ___ , AS(B) AS(V) AS(C) AS(X) AS(Z) ,
-                   ___ ___ , ___  ___
-      )
-
-//RLEFT base
-ZMK_BASE_LAYER(BmLeft,
-      AS(P)          AS(O)    AS(I)      AS(U)  AS(Y)  , ___  ___  ___  ___  ___  ,
-      AS(SEMICOLON)  AS(L)    AS(K)      AS(J)  AS(H)  , ___  ___  ___  ___  ___  ,
-      AS(SLASH)      AS(DOT)  AS(COMMA)  AS(M)  AS(N)  , ___  ___  ___  ___  ___  ,
-                   ___ ___ , ___  ___
-                 )
 //BMIRROR
-ZMK_BASE_LAYER(BMirror,
+ZMK_BASE_LAYER(Mirrored,
     AS(P)          AS(O)    AS(I)      AS(U)  AS(Y) , AS(T) AS(R) AS(E) AS(W) AS(Q) ,
    AS(SEMICOLON)  AS(L)    AS(K)      AS(J)  AS(H)  , AS(G) AS(F) AS(D) AS(S) AS(A) ,
     AS(SLASH)      AS(DOT)  AS(COMMA)  AS(M)  AS(N) , AS(B) AS(V) AS(C) AS(X) AS(Z) ,
@@ -164,17 +152,17 @@ ZMK_BASE_LAYER(BMirror,
 
 //LEFT nav layer
 ZMK_BASE_LAYER(Left,
-    XXX      XXX         XXX           XXX     XXX ,  XXX   &kp C_VOL_UP &kp C_VOL_DN  &kp LGUI  &kp C_PP   ,
-    &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END XXX ,  XXX   &kp LCTRL    &kp LALT      XXX       &kp RSHIFT ,
-    XXX      XXX         XXX           XXX     XXX ,  XXX   &kp C_MUTE    XXX          XXX       XXX        ,
+    XXX      XXX         XXX           XXX     XXX ,  XXX   &kp C_VOL_UP &kp C_VOL_DN  &kp C_MUTE &kp C_PP   ,
+    &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END XXX ,  XXX   &kp LCTRL    &kp LALT      XXX        &kp RSHIFT ,
+    XXX      XXX         XXX           XXX     XXX ,  XXX   &kp LGUI    XXX          XXX        XXX        ,
                                    &kp DEL &kp DEL ,   &kp DEL &kp DEL
                  )
 
 //RIGHT cursor keys and symbols layer
 ZMK_BASE_LAYER(Right,
-    XXX         &kp LGUI &kp C_BRI_DN  &kp C_BRI_UP  XXX   ,   &kp GRAVE &kp MINUS  &kp EQUAL  &kp BSPC  &kp BACKSLASH ,
+    XXX         XXX      &kp C_BRI_DN  &kp C_BRI_UP  XXX   ,   &kp GRAVE &kp MINUS  &kp EQUAL  &kp BSPC  &kp BACKSLASH ,
     &kp LSHIFT  XXX      &kp LALT      &kp LCTRL     XXX   ,   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT &kp SQT       ,
-    XXX         XXX      XXX           XXX           XXX   ,   XXX       &kp LS(N9) &kp LBKT   &kp RBKT  &kp LS(N0)    ,
+    XXX         XXX      XXX           &kp LGUI      XXX   ,   XXX       &kp LS(N9) &kp LBKT   &kp RBKT  &kp LS(N0)    ,
                                          &kp BSPC &kp BSPC ,   &kp BSPC &kp BSPC
 )
 
@@ -188,7 +176,7 @@ ZMK_BASE_LAYER(Mouse,
 
 // SETTINGS
 ZMK_BASE_LAYER(Settings,
-   &studio_unlock &out OUT_USB   &out OUT_BLE  &soft_off     &sys_reset   , &sys_reset    &soft_off     XXX           XXX          &studio_unlock ,
+   &studio_unlock &out OUT_USB   &out OUT_BLE  &my_soft_off     &sys_reset   , &sys_reset    &hw_soft_off     XXX           XXX          &studio_unlock ,
    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4 , &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4      ,
    &bt BT_CLR     &bt BT_CLR_ALL &to BMIRROR   XXX          &bootloader  , &bootloader   XXX          &to BMIRROR   XXX           XXX ,
                                                      &to BASE &to BASE ,  &to BASE &to BASE
