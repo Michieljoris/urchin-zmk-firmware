@@ -31,10 +31,115 @@ layers:
     - {t: ',', h: Autoshift}
     - {t: ., h: Autoshift}
     - {t: /, h: Autoshift}
-  - - {t: Mods (sticky), h: Mirrored}
+  - - {t: Mods}
     - {t: SPC, h: Gui+Ctl+LALT}
     - {t: SPC, h: Gui+Ctl+LALT}
-    - {t: Mods (sticky), h: Mirrored}
+    - {t: Mods}
+  Combos 1/1:
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+  Combos 2/3:
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+  Combos 3/3:
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
   Mods:
   - ['', '', BRI DN, BRI UP, '', '', VOL UP, VOL DN, MUTE, PP]
   - - {t: LSHIFT, h: sticky}
@@ -61,41 +166,6 @@ layers:
     - ''
     - ''
     - ''
-  Mirrored:
-  - - {t: P, h: Sft+P}
-    - {t: O, h: Sft+O}
-    - {t: I, h: Sft+I}
-    - {t: U, h: Sft+U}
-    - {t: Y, h: Sft+Y}
-    - {t: T, h: Sft+T}
-    - {t: R, h: Sft+R}
-    - {t: E, h: Sft+E}
-    - {t: W, h: Sft+W}
-    - {t: Q, h: Sft+Q}
-  - - {t: ;, h: Sft+;}
-    - {t: L, h: Sft+L}
-    - {t: K, h: Sft+K}
-    - {t: J, h: Sft+J}
-    - {t: H, h: Sft+H}
-    - {t: G, h: Sft+G}
-    - {t: F, h: Sft+F}
-    - {t: D, h: Sft+D}
-    - {t: S, h: Sft+S}
-    - {t: A, h: Sft+A}
-  - - {t: /, h: Sft+/}
-    - {t: ., h: Sft+.}
-    - {t: ',', h: 'Sft+,'}
-    - {t: M, h: Sft+M}
-    - {t: N, h: Sft+N}
-    - {t: B, h: Sft+B}
-    - {t: V, h: Sft+V}
-    - {t: C, h: Sft+C}
-    - {t: X, h: Sft+X}
-    - {t: Z, h: Sft+Z}
-  - - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
   Left:
   - ['', '', '', '', '', '', VOL UP, VOL DN, MUTE, PP]
   - - HOME
@@ -173,143 +243,73 @@ layers:
     - {t: Base, h: toggle}
     - {t: Base, h: toggle}
     - {t: Base, h: toggle}
+  Mirrored:
+  - - {t: P, h: Autoshift}
+    - {t: O, h: Autoshift}
+    - {t: I, h: Autoshift}
+    - {t: U, h: Autoshift}
+    - {t: Y, h: Autoshift}
+    - {t: T, h: Autoshift}
+    - {t: R, h: Autoshift}
+    - {t: E, h: Autoshift}
+    - {t: W, h: Autoshift}
+    - {t: Q, h: Autoshift}
+  - - {t: ;, h: Autoshift}
+    - {t: L, h: Autoshift}
+    - {t: K, h: Autoshift}
+    - {t: J, h: Autoshift}
+    - {t: H, h: Autoshift}
+    - {t: G, h: Autoshift}
+    - {t: F, h: Autoshift}
+    - {t: D, h: Autoshift}
+    - {t: S, h: Autoshift}
+    - {t: A, h: Autoshift}
+  - - {t: /, h: Autoshift}
+    - {t: ., h: Autoshift}
+    - {t: ',', h: Autoshift}
+    - {t: M, h: Autoshift}
+    - {t: N, h: Autoshift}
+    - {t: B, h: Autoshift}
+    - {t: V, h: Autoshift}
+    - {t: C, h: Autoshift}
+    - {t: X, h: Autoshift}
+    - {t: Z, h: Autoshift}
+  - - {}
+    - {}
+    - {}
+    - {}
 
-  Combos:
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-  Combos Numbers:
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-  Combos Nav:
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
 combos:
 - p: [0, 1]
-  k: {t: '1', h: Sft+1}
-  l: [Combos Numbers]
+  k: {t: '1', h: Autoshift}
+  l: [Combos 1/1]
 - p: [1, 2]
-  k: {t: '3', h: Sft+3}
-  l: [Combos Numbers]
+  k: {t: '3', h: Autoshift}
+  l: [Combos 1/1]
 - p: [2, 3]
-  k: {t: '5', h: Sft+5}
-  l: [Combos Numbers]
+  k: {t: '5', h: Autoshift}
+  l: [Combos 1/1]
 - p: [10, 11]
-  k: {t: '2', h: Sft+2}
-  l: [Combos Numbers]
+  k: {t: '2', h: Autoshift}
+  l: [Combos 1/1]
 - p: [22, 23]
-  k: {t: '4', h: Sft+4}
-  l: [Combos Numbers]
+  k: {t: '4', h: Autoshift}
+  l: [Combos 1/1]
 - p: [6, 7]
-  k: {t: '6', h: Sft+6}
-  l: [Combos Numbers]
+  k: {t: '6', h: Autoshift}
+  l: [Combos 1/1]
 - p: [7, 8]
-  k: {t: '8', h: Sft+8}
-  l: [Combos Numbers]
+  k: {t: '8', h: Autoshift}
+  l: [Combos 1/1]
 - p: [8, 9]
-  k: {t: '0', h: Sft+0}
-  l: [Combos Numbers]
+  k: {t: '0', h: Autoshift}
+  l: [Combos 1/1]
 - p: [18, 19]
-  k: {t: '9', h: Sft+9}
-  l: [Combos Numbers]
+  k: {t: '9', h: Autoshift}
+  l: [Combos 1/1]
 - p: [26, 27]
-  k: {t: '7', h: Sft+7}
-  l: [Combos Numbers]
+  k: {t: '7', h: Autoshift}
+  l: [Combos 1/1]
 
 - p: [0, 1]
   k: F1
@@ -342,68 +342,68 @@ combos:
   k: F7
   l: [Right]
 - p: [0, 2]
-  k: {t: '`', h: Sft+`}
-  l: [Combos]
+  k: {t: '`', h: Autoshift}
+  l: [Combos 2/3]
 - p: [0, 3]
   k: PAGE DOWN
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [1, 3]
-  k: {t: T, h: Sft+T}
-  l: [Combos]
+  k: {t: t, h: Autoshift}
+  l: [Combos 2/3]
 - p: [12, 13]
-  k: {t: TAB, h: Sft+TAB}
-  l: [Combos Numbers]
+  k: {t: TAB, h: Autoshift}
+  l: [Combos 1/1]
 - p: [11, 12]
   k: ESC
-  l: [Combos Numbers]
+  l: [Combos 1/1]
 - p: [10, 12]
   k: '&caps_word'
-  l: [Combos]
+  l: [Combos 2/3]
 - p: [10, 13]
   k: LEFT
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [11, 13]
-  k: {t: G, h: Sft+G}
-  l: [Combos]
+  k: {t: g, h: Autoshift}
+  l: [Combos 2/3]
 - p: [21, 22]
   k: END
-  l: [Combos Numbers]
+  l: [Combos 1/1]
 - p: [20, 21]
   k: HOME
-  l: [Combos Numbers]
+  l: [Combos 1/1]
 - p: [20, 22]
   k: '&leader'
-  l: [Combos]
+  l: [Combos 3/3]
 - p: [20, 23]
   k: DOWN
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [21, 23]
-  k: B
-  l: [Combos]
+  k: {t: b, h: Autoshift}
+  l: [Combos 2/3]
 - p: [7, 9]
-  k: \
-  l: [Combos]
+  k: {t: \, h: Autoshift}
+  l: [Combos 2/3]
 - p: [6, 9]
   k: PAGE UP
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [6, 8]
-  k: {t: Y, h: Sft+Y}
-  l: [Combos]
+  k: {t: y, h: Autoshift}
+  l: [Combos 2/3]
 - p: [16, 17]
   k: RET
-  l: [Combos Numbers]
+  l: [Combos 1/1]
 - p: [17, 18]
   k: ESC
-  l: [Combos Numbers]
+  l: [Combos 1/1]
 - p: [17, 19]
-  k: {t: '''', h: Sft+'}
-  l: [Combos]
+  k: {t: '''', h: Autoshift}
+  l: [Combos 2/3]
 - p: [16, 19]
   k: RIGHT
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [16, 18]
-  k: {t: H, h: Sft+H}
-  l: [Combos]
+  k: {t: h, h: Autoshift}
+  l: [Combos 2/3]
 - p: [16, 17]
   k: F11
   l: [Right]
@@ -411,159 +411,32 @@ combos:
   k: F12
   l: [Right]
 - p: [27, 28]
-  k: {t: '-', h: Sft+-}
-  l: [Combos Numbers]
+  k: {t: '-', h: Autoshift}
+  l: [Combos 1/1]
 - p: [28, 29]
-  k: {t: '=', h: Sft+=}
-  l: [Combos Numbers]
+  k: {t: '=', h: Autoshift}
+  l: [Combos 1/1]
 - p: [27, 29]
   k: '&leader'
-  l: [Combos]
+  l: [Combos 3/3]
 - p: [26, 29]
   k: UP
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [26, 28]
-  k: N
-  l: [Combos]
+  k: {t: n, h: Autoshift}
+  l: [Combos 2/3]
 - p: [16, 8]
   k: BSPC
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [16, 9]
   k: DELETE
-  l: [Combos Nav]
+  l: [Combos 3/3]
 - p: [26, 18]
-  k: {t: '[', h: 'Sft+['}
-  l: [Combos]
+  k: {t: '[', h: Autoshift}
+  l: [Combos 2/3]
 - p: [26, 19]
-  k: {t: ']', h: 'Sft+]'}
-  l: [Combos]
+  k: {t: ']', h: Autoshift}
+  l: [Combos 2/3]
 - p: [10, 19]
   k: '&caps_word'
-  l: [Combos]
-- p: [0, 4, 24]
-  k: {t: Settings, h: toggle}
-  l: [Mirrored]
-- p: [9, 5, 25]
-  k: {t: Settings, h: toggle}
-  l: [Mirrored]
-- p: [9, 8]
-  k: {t: '1', h: Sft+1}
-  l: [Mirrored]
-- p: [8, 7]
-  k: {t: '3', h: Sft+3}
-  l: [Mirrored]
-- p: [7, 6]
-  k: {t: '5', h: Sft+5}
-  l: [Mirrored]
-- p: [19, 18]
-  k: {t: '2', h: Sft+2}
-  l: [Mirrored]
-- p: [27, 26]
-  k: {t: '4', h: Sft+4}
-  l: [Mirrored]
-- p: [3, 2]
-  k: {t: '6', h: Sft+6}
-  l: [Mirrored]
-- p: [2, 1]
-  k: {t: '8', h: Sft+8}
-  l: [Mirrored]
-- p: [1, 0]
-  k: {t: '0', h: Sft+0}
-  l: [Mirrored]
-- p: [11, 10]
-  k: {t: '9', h: Sft+9}
-  l: [Mirrored]
-- p: [23, 22]
-  k: {t: '7', h: Sft+7}
-  l: [Mirrored]
-- p: [9, 7]
-  k: '`'
-  l: [Mirrored]
-- p: [9, 6]
-  k: PAGE DOWN
-  l: [Mirrored]
-- p: [8, 6]
-  k: T
-  l: [Mirrored]
-- p: [17, 16]
-  k: {t: TAB, h: Sft+TAB}
-  l: [Mirrored]
-- p: [18, 17]
-  k: ESC
-  l: [Mirrored]
-- p: [19, 17]
-  k: '&hml LS(LALT)'
-  l: [Mirrored]
-- p: [19, 16]
-  k: {t: LEFT, h: Sft+LCTRL}
-  l: [Mirrored]
-- p: [18, 16]
-  k: {t: G, h: '&moc 4'}
-  l: [Mirrored]
-- p: [28, 27]
-  k: END
-  l: [Mirrored]
-- p: [29, 28]
-  k: HOME
-  l: [Mirrored]
-- p: [29, 27]
-  k: '&leader'
-  l: [Mirrored]
-- p: [29, 26]
-  k: DOWN
-  l: [Mirrored]
-- p: [28, 26]
-  k: B
-  l: [Mirrored]
-- p: [2, 0]
-  k: \
-  l: [Mirrored]
-- p: [3, 0]
-  k: PAGE UP
-  l: [Mirrored]
-- p: [3, 1]
-  k: Y
-  l: [Mirrored]
-- p: [13, 12]
-  k: {t: RET, h: Ctl+LALT}
-  l: [Mirrored]
-- p: [12, 11]
-  k: {t: ESC, h: '&moa 3'}
-  l: [Mirrored]
-- p: [12, 10]
-  k: {t: '''', h: Alt+LSHIFT}
-  l: [Mirrored]
-- p: [13, 10]
-  k: {t: RIGHT, h: Sft+LCTRL}
-  l: [Mirrored]
-- p: [13, 11]
-  k: {t: H, h: '&moc 3'}
-  l: [Mirrored]
-- p: [22, 21]
-  k: '-'
-  l: [Mirrored]
-- p: [21, 20]
-  k: '='
-  l: [Mirrored]
-- p: [22, 20]
-  k: '['
-  l: [Mirrored]
-- p: [23, 20]
-  k: UP
-  l: [Mirrored]
-- p: [23, 21]
-  k: N
-  l: [Mirrored]
-- p: [13, 1]
-  k: BSPC
-  l: [Mirrored]
-- p: [13, 0]
-  k: DELETE
-  l: [Mirrored]
-- p: [23, 11]
-  k: '['
-  l: [Mirrored]
-- p: [23, 10]
-  k: ']'
-  l: [Mirrored]
-
+  l: [Combos 2/3]
